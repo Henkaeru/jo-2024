@@ -1,3 +1,24 @@
+/*polices et taille de police pour pc*/
+
+body{
+    font-family: montserrat;
+    font-size: 16;
+}
+
+h1{
+    font-size: 128;
+    font-family: Amoresa; src:"./Amoresa.ttf"
+}
+
+h2{
+    font-size: 48;
+    font-family: Cinzel; src:"./Cinzel-Regular.otf"
+}
+
+h3{
+    font-size: 36;
+}
+
 main {
     width: 1440px;
     height: auto;
