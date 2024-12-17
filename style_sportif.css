@@ -28,4 +28,16 @@ section > nav > img {
 
 
 /*mise en forme*/
+header {
+    background-color: #141E61;
+}
+
+header > nav > ul >li {
+    display: inline-block;
+}
+
+nav> nav > ul >li>a {
+    color: white;
+    list-style-type: none;
+}
 
