@@ -6,6 +6,23 @@ h1 {
     background-image: url(images/discipline/image_titre.png);
 }
 
-section > article {
+article{
+    display: flex;
+}
+
+article:first-child > p {
+    width: 60%;
+    margin-left: 5%;
+}
+
+article:first-child > figure {
+    align-self: right;
+}
+
+article:nth-child(2) > ul {
+    width: 60%;
+    margin: 20px;
+    padding: 40px;
     background-color: white;
+    align-self: flex-end;
 }
