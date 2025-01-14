@@ -1,76 +1,220 @@
 /*polices et taille de police pour pc*/
 
 body{
-    font-family: montserrat;
-    font-size: 16;
+    font-family: 'Montserrat';
+    font-size: 16px;
     color: #000;
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .Titre{
     background-image: url("images/image_titre.png");
-    background-repeat: no-repeat;
     color: #fff;
     height: 895px;
+    width: 100%;
 }
+.Deroulement>div> hr{
+    color: #F50022 ;
+    background-color: #F50022;
+    width:780px;
+    height: 10px;
+    border: solid;
+}
+
+table{
+    border-collapse: collapse;
+    
+}
+
+thead{
+    background-color: #FFE26E;
+}
+tbody{
+    background-color: #fff;
+}
+th,td{
+    border: 1px solid #000;
+}
+
 h1{
-    font-size: 128;
+    font-size: 128px;
     font-family: Amoresa; src:"polices/Amoresa.ttf";
 }
 .Titre>h1:nth-of-type(2){
-    font-size: 110;
+    font-size: 110px;
     font-family: Cinzel; src:"polices/Cinzel-Regular.otf"
 }
 
+.Moments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #141E61;
+    width: 100%;
+}
+
+.Moments>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.Moments>div>img{
+    width: 330px;
+    height: 299px;
+}
+
+.Moments>div>figure{
+    width: 480px;
+    height: 330px;
+}
+
+.Résultats{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.Résultats> hr{
+    background-color: #141E61;
+    width: 780px;
+    height: 8.91px;
+}
+
+.Résultats>table{
+    width: 1080;
+}
+
+.Premiere_zone{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.Premiere_zone>img{
+    width: 390px;
+    height: 420px;
+    position: absolute;
+    left:525px;
+    top:420px;
+}
+.site{
+    width: 630px;
+    height: 426px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.site>div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.site>div>figure>img{
+    width: 262px;
+    height: 240px;
+}
+
+.Deroulement>div{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Deroulement>div>p{
+    width: 700px;
+}
+
+.Deroulement>figure{
+    width: 210px;
+    height: 210px;
+}
+
+.Podium{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Podium>div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.Podium>div>div{
+    border-radius: 10px;
+    width: 300px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Podium>div>div>img{
+    width: 55px;
+    height: 55px;
+}
+.Podium>div>div>div{
+    font-size: 36px;
+}
+.Podium>div>div:first-of-type{
+    background-color: #FFE26E;
+}
+
+.Podium>div>div:nth-of-type(2){
+    background-color: #A2D3FD;
+}
+.Podium>div>div:nth-of-type(3){
+    background-color: #AD5655;
+}
+
+.Podium>div>div>figure>img{
+    width: 90px;
+    height: 90px;
+}
+
+.Récap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Récap>h2{
+    width: 1110px;
+}
+
+.Récap>table{
+    width: 840px;
+}
+
+.Fond_Podium{
+    width: 1440px;
+    background-image: url(images/lignes_JO.png);
+}
+
+
 h2{
-    font-size: 48;
+    font-size: 48px;
     font-family: Cinzel; src:"polices/Cinzel-Regular.otf"
 }
 
 h3{
-    font-size: 36;
-    font-weight: bold;
+    font-size: 36px;
 }
 
 main {
     width: 1440px;
     height: auto;
 }
-
-/*mise en forme des images*/
-
-section > img:first-of-type {
-    float: right;
-    width: 936px;
-    height: 872px;
-}
-
-section > figure > img:first-child {
-    width: 209px;
-    height: 204px;
-}
-
-section > figure > img:last-child {
-    width: 246.28px;
-    height: 135px;
-}
-
-section > nav > img {
-    width: 72px;
-    height: 72px;
-}
-
-
-/*mise en forme*/
-header {
-    background-color: #141E61;
-}
-
-header > nav > ul >li {
-    display: inline-block;
-}
-
-nav> nav > ul >li>a {
-    color: white;
-    list-style-type: none;
-}
-
