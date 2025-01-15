@@ -53,10 +53,11 @@ header + * {
 /*mise en forme des images*/
 /**********************************************************************/
 
-section > img:first-of-type { /**/
-    float: right;
-    width: 936px;
-    height: 872px;
+section > img:first-of-type { /*image des médailles*/
+    bottom: -130px;
+    left: 75%;
+    width: 900px;
+    height: 300px;
 }
 
 section > figure > img:first-child { /*image du drapeau francais circulaire*/
@@ -103,7 +104,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     width: 100%;
     background-image: url(jo-2024-main/images/profil/Léon_marchand.png); /*image de léon marchand*/
     background-repeat: no-repeat;
-    background-size: 1600px 1600px;       /*width puis height*/
+    background-size: contain;       /*width puis height*/
     background-position: right; /*permet de */
 }
 
@@ -172,7 +173,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     z-index: 1;
     background-color: #fff;
     border-radius: 15px;
-    padding: 5px;
+    padding: 50px;
     margin: 50px; /*permet de bien dimensionner l'article 'description de l'athlète' dans la deuxième section*/
     margin-bottom: 60px;
 }
