@@ -18,6 +18,7 @@ header section {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 50px;
 }
 
 header img {
@@ -53,36 +54,43 @@ header + * {
 /*mise en forme des images*/
 /**********************************************************************/
 
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 section > img:first-of-type { /*image des médailles*/
     bottom: -130px;
     left: 75%;
-    width: 900px;
-    height: 300px;
+    width: 450px;
+    height: 150px;
 }
 
 section > figure > img:first-child { /*image du drapeau francais circulaire*/
-    width: 460px;
-    height: 460px;
+    display: flex;
+    justify-content: center;
+    width: 230px;
+    height: 230px;
     position: relative;
-    top: 150px;
-
+    left: 25%;
+    top: 10%;
 }
 
 section > figure > img:last-child { /*image du logo de natation*/
-    width: 500px;
-    height: 250px;
+    width: 250px;
+    height: 125px;
     position: relative;
-    top: 100px;
+    left: 25%;
+    top: 15%;
 }
 
 section > nav > img { /*groupe des images de insta, facebook et hashtag*/
-    width: 250px;
-    height: 250px;
-    display: flex;
-    align-items: flex-end;
+    width: 150px;
+    height: 150px;
     position: relative;
-    top: 100px;
-    right: 120px;
+    top: 20%;
+    left: 20%;
 }
 
 .image1 { /*image du groupe de médailles*/
@@ -98,11 +106,11 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 /**********************************************************************/
 
 .coucou1{ /*image de léon marchand*/
-    position: absolute; /*permet de ne pas influer sur le positionnement des autres éléments*/
+    position: relative; /*permet de ne pas influer sur le positionnement des autres éléments*/
     background-color: #141E61;
-    height: 1600px;
+    height: 3000px;
     width: 100%;
-    background-image: url(jo-2024-main/images/profil/Léon_marchand.png); /*image de léon marchand*/
+    background-image: url(images/Léon_marchand.png); /*image de léon marchand*/
     background-repeat: no-repeat;
     background-size: contain;       /*width puis height*/
     background-position: right; /*permet de */
@@ -121,7 +129,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     display: flex;
     flex-direction: row; /*permet d'influencer sur la direction des éléments, ils sont tous en ligne*/
     position: relative;
-    left: 570px;
+    left: 20%;
 }
 
 .coucou1 > figure > img { /*images de la france et du logo de la natation*/
@@ -152,8 +160,8 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 
 .coucou2 { /*classe définissant la deuxième section*/
     position: relative;
+    margin-top: 50px;
     z-index: 1; /*pour mettre en avant plan car les autres parties se saccadet*/
-    top: 1800px; /*permet de ne pas superposer les sections entre eux*/
     background-color: #141E61;
     padding: 10px;
     /*text-align: center;*/
@@ -225,31 +233,30 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 .coucou3 { /*classe définissant la troisième partie*/
     position: relative;
     z-index: 3;
-    top: 2500px;
+    margin-top: 50px;
     background-color: #fff;
     border: 15px solid black;
     background-image: url(jo-2024-main/images/profil/club_dauphins_TOEC.png);
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain; /*image redimmensionné proportionnellement*/
-    height: auto;
+    height: 35%;
+    width: 100%;
     margin: 1%;
-    width: 98%;
 }
 
 .coucou3 > article > div {  /*conteneur de l'image*/
     display: flex; /*conteneur de l'image en flex pour pouvoir placer l'image au milieu*/
     justify-content: center;
     align-items: center;
-    align-items: flex-end;
     margin-top: 10px; 
-
 }
 
 .coucou3 > article > div > img { /*image du dauphin du TOEC*/
-    position: relative;
-    width: 900px; 
-    height: 850px;
+    position: absolute;
+    width: 450px; 
+    height: 425px;
+    top: 30%;
     border-radius: 10px;
 }
 
@@ -278,6 +285,7 @@ section > article > h2 + h3 + p {
     background-color: #141E61;
     width: 30%; /* Largeur des carrés */
     height: 25%; /* Hauteur des carrés */
+    
 }
 
 .block_bleu1 {
@@ -288,4 +296,23 @@ section > article > h2 + h3 + p {
 .block_bleu2 {
     bottom: -80px;
     left: -50px;
+}
+
+/**********************************************************************/
+/*mise en place du titre de la 4eme partie*/
+/**********************************************************************/
+
+.coucou4 {
+    background-color: #141E61;
+    margin-top: 3%;
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coucou4 > h2 {
+    color: #fff;
+    font-size: 80px;
 }
