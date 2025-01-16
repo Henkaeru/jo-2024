@@ -2,6 +2,11 @@
 /*mise en forme du header*/
 /**********************************************************************/
 
+body {
+    position: relative; /* Crée un contexte pour les blocs absolus */
+    z-index: 0; /* Ne pas perturber les blocs enfants */
+}
+
 header {
     background-color: #141E61;
     padding: 0 1rem 0.5rem 0.5rem;
@@ -68,37 +73,33 @@ section > img:first-of-type { /*image des médailles*/
 }
 
 section > figure > img:first-child { /*image du drapeau francais circulaire*/
-    display: flex;
-    justify-content: center;
-    width: 230px;
-    height: 230px;
+    width: 500px;
+    height: 500px;
     position: relative;
-    left: 25%;
-    top: 10%;
+    left: 5%;
+    bottom: 10%;
 }
 
 section > figure > img:last-child { /*image du logo de natation*/
-    width: 250px;
-    height: 125px;
+    width: 500px;
+    height: 250px;
     position: relative;
-    left: 25%;
-    top: 15%;
+    left: 5%;
+    bottom: -5%;
 }
 
 section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     width: 150px;
     height: 150px;
     position: relative;
-    top: 20%;
+    top: 0px;
     left: 20%;
 }
 
 .image1 { /*image du groupe de médailles*/
-    position: relative;
-    bottom: 0px;
-    right: 0px;
-    width: 20px;
-    height: 10px;
+    position: absolute;
+    top: 100%;
+    left: 100px;
 }
 
 /**********************************************************************/
@@ -108,12 +109,13 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 .coucou1{ /*image de léon marchand*/
     position: relative; /*permet de ne pas influer sur le positionnement des autres éléments*/
     background-color: #141E61;
-    height: 3000px;
+    height: 2500px;
     width: 100%;
-    background-image: url(images/Léon_marchand.png); /*image de léon marchand*/
+    background-image: url(jo-2024-main/images/profil/Léon_marchand.png); /*image de léon marchand*/
     background-repeat: no-repeat;
     background-size: contain;       /*width puis height*/
     background-position: right; /*permet de */
+    margin-bottom: 5%;
 }
 
 .coucou1 > figure { /*images de le france et natation*/
@@ -121,15 +123,17 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     flex-direction: column; /*permet d'influer sur la direction des éléments, ils sont tous en colonne*/
     justify-content: center; /*place les éléments au milieu du bloc parent*/
     position: relative; /*place précisement les éléments*/
-    bottom: 70px;
-    left: 570px;
+    bottom: -30%;
+    left: 15%;
+    padding: 10px;
 }
 
 .coucou1 > nav { /*images des logos insta et tout*/
     display: flex;
     flex-direction: row; /*permet d'influencer sur la direction des éléments, ils sont tous en ligne*/
     position: relative;
-    left: 20%;
+    left: 0%;
+    bottom: -40%;
 }
 
 .coucou1 > figure > img { /*images de la france et du logo de la natation*/
@@ -144,10 +148,11 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     position: relative;
     bottom: 10px;
     color: white;
-    font-size: 120px;
+    font-size: 128px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bolder;
     padding: 3px;
+    left: 20%;
 }
 
 .coucou1 > h1::first-letter { /*premiere lettre du titre*/
@@ -164,6 +169,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     z-index: 1; /*pour mettre en avant plan car les autres parties se saccadet*/
     background-color: #141E61;
     padding: 10px;
+    margin-bottom: 5%;
     /*text-align: center;*/
 }
 
@@ -232,7 +238,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 
 .coucou3 { /*classe définissant la troisième partie*/
     position: relative;
-    z-index: 3;
+    z-index: 5;
     margin-top: 50px;
     background-color: #fff;
     border: 15px solid black;
@@ -241,8 +247,13 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     background-repeat: no-repeat;
     background-size: contain; /*image redimmensionné proportionnellement*/
     height: 35%;
-    width: 100%;
+    width: 96%;
     margin: 1%;
+}
+
+.coucou3 > article {
+    position: relative;
+    z-index: 5;
 }
 
 .coucou3 > article > div {  /*conteneur de l'image*/
@@ -279,15 +290,13 @@ section > article > h2 + h3 + p {
     font-size: 80px;
 }
 
-.block_bleu1, .block_bleu2 { /*définition des blocks bleux*/
-    position: absolute;
-    z-index: 1;
+.block_bleu1, .block_bleu2, .block_bleu3, .block_bleu4 {
+    position: absolute; /* Positionnement absolu relatif à .coucou2 */
+    z-index: -36;
     background-color: #141E61;
-    width: 30%; /* Largeur des carrés */
-    height: 25%; /* Hauteur des carrés */
-    
+    width: 500px; /* Largeur des carrés */
+    height: 200px; /* Hauteur des carrés */
 }
-
 .block_bleu1 {
     top: -80px;
     right: -50px;
@@ -308,11 +317,12 @@ section > article > h2 + h3 + p {
     width: 100%;
     height: 25%;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .coucou4 > h2 {
     color: #fff;
     font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
