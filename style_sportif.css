@@ -5,7 +5,10 @@
 body {
     position: relative; /* Crée un contexte pour les blocs absolus */
     z-index: 0; /* Ne pas perturber les blocs enfants */
+
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 header {
     background-color: #141E61;
@@ -17,19 +20,17 @@ header {
     left: 0;
     width: 100%;
     z-index: 1000;
-}
-
-header section {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    margin-top: 50px;
+    justify-content: left;
 }
 
 header img {
-    height: 120px;
-    padding: 5px;
-    margin-right: 18%;
+    height: 15em;
+    padding: 0.3em;
+    margin-right: 22%;
 }
 
 header nav ul {
@@ -43,7 +44,7 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 34px;
+    font-size: 10em;
     transition: color 0.3s;
 }
 
@@ -52,9 +53,8 @@ header nav ul li a:hover {
 }
 
 header + * {
-    margin-top: 115px;
+    margin-top: 5%;
 }
-
 /**********************************************************************/
 /*mise en forme des images*/
 /**********************************************************************/
@@ -72,7 +72,7 @@ section > img:first-of-type { /*image des médailles*/
     height: 150px;
 }
 
-section > figure > img:first-child { /*image du drapeau francais circulaire*/
+.drapeau_france{ /*image du drapeau francais circulaire*/
     width: 500px;
     height: 500px;
     position: relative;
@@ -111,11 +111,12 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     background-color: #141E61;
     height: 2500px;
     width: 100%;
-    background-image: url(jo-2024-main/images/profil/Léon_marchand.png); /*image de léon marchand*/
+    background-image: url(images/Léon_marchand.png); /*image de léon marchand*/
     background-repeat: no-repeat;
     background-size: contain;       /*width puis height*/
     background-position: right; /*permet de */
     margin-bottom: 5%;
+    margin-top: 150px;
 }
 
 .coucou1 > figure { /*images de le france et natation*/
@@ -179,7 +180,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     font-variant: small-caps;
     color: #fff;
     font-weight:bold;
-    font-size: 120px;
+    font-size: 128px;
 }
 
 .coucou2 > article { /*article de la deuxième partie*/
@@ -197,12 +198,12 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 }
 
 .coucou2 > article > h3 + p { /*paragraphe de la deuxième partie*/
-    font-size: 60px;
+    font-size: 36px;
 }
 
 
 .coucou2 > article > ul > li { /*liste de l'article de la dexième partie*/
-    font-size: 60px;
+    font-size: 36px;
 }
 
 .block_rouge1, .block_rouge2, .block_rouge3, .block_rouge4 {
@@ -274,7 +275,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 section > article > h2 { /*sous-titre de la troisième partie*/
     position: relative;
     left: 200px;
-    font-size: 120px;
+    font-size: 128px;
 }
 
 section > article > h2 + h3 {
@@ -287,7 +288,7 @@ section > article > h2 + h3 + p {
     position: relative;
     left: 200px;
     width: 40%;
-    font-size: 80px;
+    font-size: 36px;
 }
 
 .block_bleu1, .block_bleu2, .block_bleu3, .block_bleu4 {
@@ -315,14 +316,45 @@ section > article > h2 + h3 + p {
     background-color: #141E61;
     margin-top: 3%;
     width: 100%;
-    height: 25%;
+    padding: 2em;
+    height: auto;
     display: flex;
+    justify-content: center;
+    background-image: url(images/header/logo_flamme_JO.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 300px 250px;
 }
 
 .coucou4 > h2 {
     color: #fff;
-    font-size: 80px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+section > article > table {
+    position: relative;
+    left: 15%;
+    margin-top: 5%;
+    width: 150em;
+    height: 120em;
+}
+
+/*.article1 {
+    width: 1000px;
+}*/
+
+.coucou4 > table > thead {
+    background-color: #FFE26E;
+}
+
+section > article > img {
+    position: relative;
+    left: 80%;
+    top: -117em;
+    width: 350px;
+    height: 150em;
+
 }
