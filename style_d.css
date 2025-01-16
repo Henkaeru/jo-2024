@@ -1,6 +1,12 @@
+/*CSS valable sur toute la feuille*/
+
+main{
+    margin: 0px;
+    padding: 0px;
+}
+
 h1 {
     margin: 0px;
-    margin-left:-10px;
     width: 100%;
     height: 1100px;
     background-image: url(images/discipline/image_titre.png);
@@ -17,6 +23,16 @@ h3{
     font-style: bold;
 }
 
+p{
+    font-size: 16px;
+}
+
+li{
+    font-size: 16px;
+    list-style-type:none;
+}
+
+
 main{
     width: 100%;
     background-color: blanchedalmond;
@@ -26,9 +42,22 @@ article{
     display: flex;
 }
 
-div{
+section{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.surligner{
+    font-size: 25px;
+    color: #f50022;
+}
+
+
+/*CSS valable sur la peemière partie : Histoire*/
+
+section:nth-of-type(2) div{
     margin:20px;
-    padding:40px;
+    padding:20px;
     width: 60%;
     background-color: white;
     z-index: 2;
@@ -46,16 +75,49 @@ section:nth-of-type(2) > article:first-of-type > img:nth-of-type(2){
     z-index: 3;
 }
 
+
+
+/*CSS valable sur la deuxième partie : Règles*/
+
 section:nth-of-type(3){
     display:flex;
+    background-color: #141E61;
+    padding: 20px;
     flex-direction: column;
-    text-align: center;
+    justify-content: flex-start;
+    height: 750px;
+}
+
+section:nth-of-type(3) > div {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
     align-items: center;
     background-color: white;
-    margin-left:200px;
-    margin-right: 200px;
-    margin-top: 10px;
+    width: 80%;
+    padding-bottom: 30px;
 }
+
+section:nth-of-type(3) > div > p{
+    width: 80%;
+}
+
+section:nth-of-type(3) > img{
+    align-self: flex-end;
+}
+
+section:nth-of-type(3) > div:not(div:first-child){
+    display: flex;
+    align-self: flex-start;
+    width: 200px;
+    height: 200px;
+    background-color: #f50022;
+}
+
+
+
+/*CSS valable sur la troisième partie : Techniques*/
 
 section:nth-of-type(4){
     display: flex;
@@ -66,58 +128,109 @@ section:nth-of-type(4)> img {
     align-self: flex-end;
     margin-left:0px;
     margin-right: 0px;
+    width: 30%;
+    height: 100%;
 }
 
 section:nth-of-type(4)> div:nth-of-type(1){ 
-    margin-right: 0px;
-    margin-left:0px;
+    width: 50%;
+    padding:5%;
     background-color: #141E61;
     color: #A2D3FD;
+    /*corner radius pour les coins ? */
 }
 
 section:nth-of-type(4)> div:nth-of-type(2){ 
-    width: 30px;
+    width: 10%;
     background-color: #4F7FC2;
     margin-left:0px;
     margin-right: 0px;
 }
 section:nth-of-type(4)> div:nth-of-type(3){ 
-    width: 30px;
+    width: 10%;
     background-color: #A2D3FD;
     margin-left:0px;
     margin-right: 0px;
 }
 
-section:nth-of-type(5) ~ article{ 
+
+
+/*CSS valable sur la quatrième partie : Epreuves*/
+
+section:nth-of-type(5) > div ~ article{ 
     display: flex;
 }
 
 section:nth-of-type(5) > h2 {
     display: flex;
-    align-self:flex-end;
-    margin-right: 20px;
+    justify-self: flex-end;
 }
 
-section:nth-of-type(5) > h3{
+section:nth-of-type(5) > div > article > h3{
     color: white;
 }
 
-section:nth-of-type(5) > article {
+section:nth-of-type(5) > div > article {
     display: inline-block;
     width: 40%;
     background-color: #141E61;
 }
 
-section:nth-of-type(5) > article:first-of-type{
+section:nth-of-type(5) > div{
+    width: 100%;
+    align-items: center;
+}
+
+section:nth-of-type(5) > div ~ article{
+    padding: 30px;
+    margin:30px
+}
+
+section:nth-of-type(5) > div > article:first-of-type{
     text-align:right;
 }
 
-
-section:nth-of-type(5) > article:last-of-type{ 
-    align-self: flex-end;
-    text-align:left;
-}
-
-section:nth-of-type(5) > ul ~ li { 
+section:nth-of-type(5) > div > article > ul ~ li { 
+    display: block;
     background-color: #A2D3FD;
 }
+
+
+
+/*CSS valable sur la cinquième partie : Profils*/
+
+section:nth-of-type(6){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(6) > div{
+    background-image: url(images/discipline/cadre_profil.png);
+    padding-left: 12px;
+    padding-right: 35px;
+    width: 8%;
+    flex-shrink: 0;
+    background-color: none;
+}
+
+section:nth-of-type(6) > div ~p {
+    align-items: column;
+    font-size: 16px;
+}
+
+main > div {
+    width: 100%;
+}
+
+main > div:first-of-type {
+    background-color: #FFE26E;
+}
+
+main > div:nth-of-type(2) {
+    background-color: #AD5655;
+}
+
+
+
+/*CSS valable sur la cinquième partie : Tableau*/
