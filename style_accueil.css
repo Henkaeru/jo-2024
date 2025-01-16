@@ -41,10 +41,95 @@ article {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 130px;
 }
 
-article > img:not(article > section + img) {
+article > section {
+    background-color: white;
+    padding: 20px 15px 30px 15px;
+}
+
+article > section > h3 {
+    margin: 0 0 25px 0;
+}
+
+article > section > p {
+    margin: 0 0 0 25px;
+}
+
+article > section:nth-of-type(odd) {
+    margin-right: auto;
+    margin-left: 0;
+    border-radius: 0 25px 25px 0;
+}
+
+article > section:nth-of-type(even) {
+    margin-left: auto;
+    margin-right: 0;
+    border-radius: 25px 0 0 25px;
+}
+
+
+
+/* Titres entre sections */
+.titre_article {
+    padding: 100px 0 100px 0;
+    background-image: url(images/accueil/lignes_france.png);
+    background-repeat: no-repeat;
+    background-size:contain ;
+    background-position: center top;
+}
+
+.titre_article * {
+    text-align: center;
+    border-radius: 25px;
+    font-family: 'Cinzel', serif;
+    word-wrap: break-word;
+    line-height: 1.2;
+
+}
+
+.titre_article h1{
+    background-color: #A2D3FD;
+    color: #141E61;
+    width: 70%;
+    font-size: 128px;
+    padding-top: 40px;
+    margin: 0 auto;
+}
+
+.titre_article h1::first-letter {
+    font-family: 'Amoresa', cursive;
+}
+
+.titre_article h2 {
+    width: 30%;
+    font-size: 48px;
+    padding: 30px 0 20px 0;
+}
+
+.titre_article h2:first-of-type {
+    background-color: #B0125E;
+    color: white;
+    margin: 0 60% 0 auto;
+}
+
+.titre_article h2:only-of-type, .titre_article h2:last-of-type {
+    background-color: #AD5655;
+    color: #FFE26E;
+    margin: 0 auto 0 60%;
+}
+
+
+
+/* position des images de sections */
+article:nth-of-type(1) {
+    gap: 130px;
+}
+article:nth-of-type(1) > section {
+    width: 64%;
+}
+
+article:nth-of-type(1) > img:not(article > section + img) {
     top: 0;
     left: 0;
     height: 100%;
@@ -56,103 +141,68 @@ article > img:not(article > section + img) {
     border-radius: 25px;
 }
 
-article:first-of-type > section:nth-of-type(odd) + img {
+article:nth-of-type(1) > section:nth-of-type(1) + img {
     position: absolute;
-    right: 0;
     height: auto;
     width: 500px;
+    right: 0;
     margin-top: -300px;
     z-index: 1;
 }
 
-article:first-of-type > section:nth-of-type(even) + img {
+article:nth-of-type(1) > section:nth-of-type(2) + img {
     position: absolute;
-    left: 0;
     height: auto;
     width: 100%;
+    left: 0;
     margin-top: 20px;
 }
 
-article > section {
-    background-color: white;
-    width: 64%;
-    padding: 20px 15px 30px 15px;
+
+article:nth-of-type(2) {
+    margin-top: 100px;
+    gap: 500px;
 }
 
-article > section > h3 {
-    margin: 0 0 25px 0;
+article:nth-of-type(2) > section {
+    margin-top: 10%;
+    width: 35%;
 }
 
-article > section > p {
-    margin: 0;
-    padding: 0 0 0 25px;
-}
-
-article > section:nth-of-type(odd) {
-    margin-left: 0;
-    border-radius: 0 25px 25px 0;
-}
-
-article > section:nth-of-type(even) {
-    margin-left: auto;
-    margin-right: 0;
-    border-radius: 25px 0 0 25px;
-}
-
-.titre_article {
-    padding: 100px 0 100px 0;
-    background-image: url(images/accueil/lignes_france.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-}
-
-.titre_article h1{
-    background-color: #A2D3FD;
-    color: #141E61;
-    width: 70%;
-    text-align: center;
+article:nth-of-type(2) > img:not(article > section + img) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 85%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
     border-radius: 25px;
-    font-size: 128px;
-    font-family: 'Cinzel', serif;
-    padding-top: 40px;
-    margin: 0 auto;
-    word-wrap: break-word;
-    line-height: 1.2;
 }
 
-.titre_article h1::first-letter {
-    font-family: 'Amoresa', cursive;
+article:nth-of-type(2) > section:nth-of-type(1) + img {
+    position: absolute;
+    height: auto;
+    width: 50%;
+    left: 8%;
+    margin-top: -7.6%;
+    z-index: -1;
 }
 
-.titre_article h2:first-of-type {
-    background-color: #B0125E;
-    color: white;
-    width: 40%;
-    text-align: center;
-    border-radius: 25px;
-    font-size: 48px;
-    font-family: 'Cinzel', serif;
-    padding-top: 20px;
-    margin: 0 50% 0 auto;
-    word-wrap: break-word;
-    line-height: 1.2;
+article:nth-of-type(2) > section:nth-of-type(2) + img {
+    position: absolute;
+    height: auto;
+    width: 35%;
+    right: 20%;
+    margin-top: 47%;
+    z-index: -1;
 }
 
-.titre_article h2:only-of-type, .titre_article h2:last-of-type {
-    background-color: #B0125E;
-    color: #FFE26E;
-    width: 40%;
-    text-align: center;
-    border-radius: 25px;
-    font-size: 48px;
-    font-family: 'Cinzel', serif;
-    padding-top: 20px;
-    margin: 0 auto 0 50%;
-    word-wrap: break-word;
-    line-height: 1.2;
-}
-
-h1 + h2 {
-    color: rebeccapurple;
+article:nth-of-type(3) > img:not(article > section + img) {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
 }
