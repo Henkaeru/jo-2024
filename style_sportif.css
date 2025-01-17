@@ -44,7 +44,7 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 10em;
+    font-size: 8em;
     transition: color 0.3s;
 }
 
@@ -65,11 +65,18 @@ main {
     flex-direction: column;
 }
 
-section > img:first-of-type { /*image des médailles*/
+.coucou1 > img { /*image des médailles*/
+    position: absolute;
+    top: 100%;
     bottom: -130px;
     left: 75%;
-    width: 450px;
-    height: 150px;
+    width: 950px;
+    height: 250px;
+    transition: all 0.2s linear; 
+}
+
+.coucou1 > img:hover {
+    transform: scale(1.5) ;
 }
 
 .drapeau_france{ /*image du drapeau francais circulaire*/
@@ -94,12 +101,6 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     position: relative;
     top: 0px;
     left: 20%;
-}
-
-.image1 { /*image du groupe de médailles*/
-    position: absolute;
-    top: 100%;
-    left: 100px;
 }
 
 /**********************************************************************/
@@ -171,7 +172,6 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     background-color: #141E61;
     padding: 10px;
     margin-bottom: 5%;
-    /*text-align: center;*/
 }
 
 .coucou2 > h2 { /*sous titre de la deuxième partie*/
@@ -187,7 +187,7 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
     position: relative;
     z-index: 1;
     background-color: #fff;
-    border-radius: 15px;
+    border-radius: 65px;
     padding: 50px;
     margin: 50px; /*permet de bien dimensionner l'article 'description de l'athlète' dans la deuxième section*/
     margin-bottom: 60px;
@@ -199,6 +199,14 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 
 .coucou2 > article > h3 + p { /*paragraphe de la deuxième partie*/
     font-size: 36px;
+    text-align:left;
+    position: relative;
+    left: 5%;
+}
+
+.coucou2 > article > h3 + ul + h3 {
+    position: relative;
+    left: 5%;
 }
 
 
@@ -209,7 +217,8 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 .block_rouge1, .block_rouge2, .block_rouge3, .block_rouge4 {
     position: absolute; /* Positionnement absolu relatif à .coucou2 */
     background-color: red;
-    width: 500px; /* Largeur des carrés */
+    min-width: 300px;
+    width: 900px; /* Largeur des carrés */
     height: 200px; /* Hauteur des carrés */
 }
 
@@ -239,17 +248,16 @@ section > nav > img { /*groupe des images de insta, facebook et hashtag*/
 
 .coucou3 { /*classe définissant la troisième partie*/
     position: relative;
-    z-index: 5;
     margin-top: 50px;
     background-color: #fff;
     border: 15px solid black;
     background-image: url(jo-2024-main/images/profil/club_dauphins_TOEC.png);
     background-position: right;
     background-repeat: no-repeat;
-    background-size: contain; /*image redimmensionné proportionnellement*/
+    background-size: 40% 100%; /*image redimmensionné proportionnellement*/
     height: 35%;
     width: 96%;
-    margin: 1%;
+    margin-left: 2%;
 }
 
 .coucou3 > article {
@@ -290,21 +298,21 @@ section > article > h2 + h3 + p {
     font-size: 36px;
 }
 
-.block_bleu1, .block_bleu2, .block_bleu3, .block_bleu4 {
+.block_bleu1, .block_bleu2 {
     position: absolute; /* Positionnement absolu relatif à .coucou2 */
-    z-index: -36;
+    z-index: -1;
     background-color: #141E61;
-    width: 500px; /* Largeur des carrés */
-    height: 200px; /* Hauteur des carrés */
+    width: 30%; /* Largeur des carrés */
+    height: 40%; /* Hauteur des carrés */
 }
 .block_bleu1 {
-    top: -80px;
-    right: -50px;
+    top: 550px;
+    right: -70px;
 }
 
 .block_bleu2 {
-    bottom: -80px;
-    left: -50px;
+    bottom: 550px;
+    left: -70px;
 }
 
 /**********************************************************************/
@@ -370,12 +378,12 @@ th {
 td {
     height: 700px;
     width: 700px;
-    font-size: 38pxs;
+    font-size: 38px;
 }
 
 .article1 > table > thead > tr > th + th + th + th {
     background-color: #AD5655;
-    background-image: url(jo-2024-main/images/profil/medaille_1.png);
+    background-image: url(jo-2024-main/images/profil/medaille_3.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 300px 300px;
@@ -425,10 +433,10 @@ td > video {
     width: 100%; /* Prend toute la largeur de la page */
     height: auto; /* Prend toute la hauteur de la page */
     padding: 20px; /* Optionnel, ajoute un peu d'espace autour des éléments */
-    margin-top: 500px;
 }
 
 .coucou5 > article {
+    margin-top: 200px;
     background-color: #141E61;
     color: #fff;
     width: 60%;
@@ -458,4 +466,12 @@ td > video {
 
 .coucou5 > article > p + h3 + p {
     font-size: 100px;
+}
+
+.coucou5 > img {
+    position: absolute;
+    z-index: -1;
+    height: 80%;
+    top: 50%;
+    left: -70%;
 }
