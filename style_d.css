@@ -78,24 +78,26 @@ section:nth-of-type(2) > article:first-of-type > img:nth-of-type(2){
 
 
 /*CSS valable sur la deuxième partie : Règles*/
-
+/*arrondir les coins*/
 section:nth-of-type(3){
     display:flex;
     background-color: #141E61;
     padding: 20px;
     flex-direction: column;
     justify-content: flex-start;
-    height: 750px;
+    height: 654px;
 }
 
-section:nth-of-type(3) > div {
-    margin-top: 80px;
+section:nth-of-type(3) > div:first-child {
+    margin: 80px;
+    border-radius:25px;
     display: flex;
     flex-direction: column;
     align-self: center;
     align-items: center;
     background-color: white;
-    width: 80%;
+    width: 1013px;
+    height: 572px;
     padding-bottom: 30px;
 }
 
@@ -137,7 +139,8 @@ section:nth-of-type(4)> div:nth-of-type(1){
     padding:5%;
     background-color: #141E61;
     color: #A2D3FD;
-    /*corner radius pour les coins ? */
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 section:nth-of-type(4)> div:nth-of-type(2){ 
@@ -145,6 +148,7 @@ section:nth-of-type(4)> div:nth-of-type(2){
     background-color: #4F7FC2;
     margin-left:0px;
     margin-right: 0px;
+    /*le mettre derrière le premier div, et plus grand*/
 }
 section:nth-of-type(4)> div:nth-of-type(3){ 
     width: 10%;
@@ -156,11 +160,7 @@ section:nth-of-type(4)> div:nth-of-type(3){
 
 
 /*CSS valable sur la quatrième partie : Epreuves*/
-
-section:nth-of-type(5) > div ~ article{ 
-    display: flex;
-}
-
+/*ajouter les carré rouge autour, centrer le texte*/
 section:nth-of-type(5) > h2 {
     display: flex;
     justify-self: flex-end;
@@ -168,41 +168,45 @@ section:nth-of-type(5) > h2 {
 
 section:nth-of-type(5) > div > article > h3{
     color: white;
+    padding-left: 40px;
+}
+
+section:nth-of-type(5) > div > article:first-of-type > h3{
+    text-align:right;
 }
 
 section:nth-of-type(5) > div > article {
     display: inline-block;
-    width: 40%;
+    width: 42%;
     background-color: #141E61;
+    padding-left: 5px;
+    padding-right: 40px;
+    padding-bottom: 20px;
 }
 
 section:nth-of-type(5) > div{
-    width: 100%;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 
-section:nth-of-type(5) > div ~ article{
-    padding: 30px;
-    margin:30px
-}
-
-section:nth-of-type(5) > div > article:first-of-type{
-    text-align:right;
-}
-
-section:nth-of-type(5) > div > article > ul ~ li { 
+section:nth-of-type(5) > div > article > ul > li { 
     display: block;
+    padding-left: 18px;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 15px;
     background-color: #A2D3FD;
 }
 
 
 
 /*CSS valable sur la cinquième partie : Profils*/
+/*mettre les deux barres en bas, et les photos des gens*/
 
 section:nth-of-type(6){
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 section:nth-of-type(6) > div{
@@ -219,7 +223,7 @@ section:nth-of-type(6) > div ~p {
     font-size: 16px;
 }
 
-main > div {
+main ~ div {
     width: 100%;
 }
 
