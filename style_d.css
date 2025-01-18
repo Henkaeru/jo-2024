@@ -15,7 +15,8 @@ h1 {
 
 h2{
     font-size: 48px;
-    font-family: Cinzel; src:"polices/Cinzel-Regular.otf"
+    font-family: Cinzel; src:"polices/Cinzel-Regular.otf";
+    text-transform: uppercase;
 }
 
 h3{
@@ -124,6 +125,7 @@ section:nth-of-type(3) > div:not(div:first-child){
 section:nth-of-type(4){
     display: flex;
     flex-direction: row;
+    background-color: #4F7FC2;
 }
 
 section:nth-of-type(4)> img {
@@ -148,7 +150,7 @@ section:nth-of-type(4)> div:nth-of-type(2){
     background-color: #4F7FC2;
     margin-left:0px;
     margin-right: 0px;
-    /*le mettre derrière le premier div, et plus grand*/
+
 }
 section:nth-of-type(4)> div:nth-of-type(3){ 
     width: 10%;
@@ -161,9 +163,30 @@ section:nth-of-type(4)> div:nth-of-type(3){
 
 /*CSS valable sur la quatrième partie : Epreuves*/
 /*ajouter les carré rouge autour, centrer le texte*/
+
+section:nth-of-type(5){
+    background-color: aliceblue;
+    margin-bottom: 100px;
+}
+
+section:nth-of-type(5) > div:first-of-type{
+    position: absolute;
+    left: 7.5%;
+    border-style: solid;
+    border-color: #f50022;
+    border-width: 1px;
+    width: 85%;
+    height: 142%;
+    margin-top: 2%;
+}
+
 section:nth-of-type(5) > h2 {
     display: flex;
     justify-self: flex-end;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 20px;
 }
 
 section:nth-of-type(5) > div > article > h3{
@@ -223,7 +246,7 @@ section:nth-of-type(6) > div ~p {
     font-size: 16px;
 }
 
-main ~ div {
+main > div {
     width: 100%;
 }
 
@@ -238,3 +261,76 @@ main > div:nth-of-type(2) {
 
 
 /*CSS valable sur la cinquième partie : Tableau*/
+
+section:nth-of-type(7){
+    position: relative;
+}
+
+section:nth-of-type(7) > div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+table {
+    width: 70%;
+    margin-right: 20px;
+}
+
+tr{
+    height: 60px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-bottom: 15px;
+}
+
+table > caption{
+    background-color: #B0125E;
+    color: white;
+    height: 82px;
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-style: bold;
+}
+
+table > thead > tr > td {
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+
+table > thead > tr > td:nth-of-type(3) {
+    background-color: #FFE26E;
+    color: #FFE26E;
+    border-color: #FFE26E;
+}
+
+table > thead > tr > td:nth-of-type(4) {
+    background-color: #A2D3FD;
+    color: #A2D3FD;
+    border-color: #A2D3FD;
+}
+
+table > thead > tr > td:nth-of-type(5) {
+    background-color: #AD5655;
+    color: #AD5655;
+    border-color: #AD5655;
+}
+
+table > tbody > tr > td{
+    background-color: aliceblue;
+    border-style: solid;
+    border-color: #4F7FC2;
+    border-width: 1px;
+    border-radius: 25px;
+}
+
+section:nth-of-type(7) > img:last-of-type {
+    height: 729;
+    width: 1943;
+    position: absolute;
+    top:54%;
+    left: -50%;
+    z-index: -1;
+}
