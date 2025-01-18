@@ -1,0 +1,480 @@
+/**********************************************************************/
+/*mise en forme du header*/
+/**********************************************************************/
+
+body {
+    position: relative; /* Crée un contexte pour les blocs absolus */
+    z-index: 0; /* Ne pas perturber les blocs enfants */
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+header {
+    background-color: #141E61;
+    padding: 0 1rem 0.5rem 0.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 25px 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+header img {
+    height: 8em;
+    padding: 0.3em;
+    margin-right: 22%;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 18%;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 3em;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #FFE26E;
+}
+
+header + * {
+    margin-top: 5%;
+}
+/**********************************************************************/
+/*mise en forme des images*/
+/**********************************************************************/
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.coucou1 > img { /*image des médailles*/
+    position: absolute;
+    top: 100%;
+    bottom: -130px;
+    left: 75%;
+    width: 950px;
+    height: 250px;
+    transition: all 0.2s linear; 
+}
+
+.coucou1 > img:hover {
+    transform: scale(1.5) ;
+}
+
+.drapeau_france{ /*image du drapeau francais circulaire*/
+    width: 250px;
+    height: 250px;
+    position: relative;
+    left: -10%;
+}
+
+section > figure > img:last-child { /*image du logo de natation*/
+    width: 360px;
+    height: 250px;
+    position: relative;
+    left: -200px;
+}
+
+section > nav > img { /*groupe des images de insta, facebook et hashtag*/
+    width: 75px;
+    height: 75px;
+    position: relative;
+    left: 5%;
+}
+
+/**********************************************************************/
+/*mise en forme de la premiere section*/
+/**********************************************************************/
+
+.coucou1{ /*image de léon marchand*/
+    position: relative; /*permet de ne pas influer sur le positionnement des autres éléments*/
+    background-color: #141E61;
+    height: auto;
+    width: 100%;
+    background-image: url(images/profil/Léon_marchand.png); /*image de léon marchand*/
+    background-repeat: no-repeat;
+    background-size: 60% 100%;       /*width puis height*/
+    background-position: right; /*permet de */
+    margin-bottom: 5%;
+    margin-top: 150px;
+}
+
+.coucou1 > figure { /*images de le france et natation*/
+    display: flex;
+    flex-direction: column; /*permet d'influer sur la direction des éléments, ils sont tous en colonne*/
+    justify-content: center; /*place les éléments au milieu du bloc parent*/
+    position: relative; /*place précisement les éléments*/
+    bottom: -30%;
+    left: 15%;
+    padding: 10px;
+}
+
+.coucou1 > nav { /*images des logos insta et tout*/
+    display: flex;
+    flex-direction: row; /*permet d'influencer sur la direction des éléments, ils sont tous en ligne*/
+    position: relative;
+    left: 0%;
+    bottom: -40%;
+}
+
+.coucou1 > figure > img { /*images de la france et du logo de la natation*/
+    padding: 20px; /*espace les éléments entre eux*/
+}
+
+.coucou1 > nav > img { /*images insta, facebook et hashtag*/
+    padding: 30px; /*espace les éléments entre eux*/
+}
+
+.coucou1 > h1 { /*titre leon marchand*/
+    position: relative;
+    bottom: 10px;
+    color: white;
+    font-size: 128px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    padding: 3px;
+    left: 10%;
+}
+
+.coucou1 > h1::first-letter { /*premiere lettre du titre*/
+    font-family: 'fantasy';
+}
+
+/**********************************************************************/
+/*mise en forme de la deuxième section*/
+/**********************************************************************/
+
+.coucou2 { /*classe définissant la deuxième section*/
+    position: relative;
+    margin-top: 50px;
+    z-index: 1; /*pour mettre en avant plan car les autres parties se saccadet*/
+    background-color: #141E61;
+    padding: 10px;
+    margin-bottom: 5%;
+}
+
+.coucou2 > h2 { /*sous titre de la deuxième partie*/
+    display: flex;
+    justify-content: center;
+    font-variant: small-caps;
+    color: #fff;
+    font-weight:bold;
+    font-size: 128px;
+}
+
+.coucou2 > article { /*article de la deuxième partie*/
+    position: relative;
+    height: auto;
+    width: 90%;
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 65px;
+    margin-left: 2%;
+    padding: 50px;
+    margin-bottom: 60px;
+}
+
+.coucou2 > article > h3 { /*sous-titre de la deuxième partie*/
+    font-size: 100px;
+}
+
+.coucou2 > article > h3 + p { /*paragraphe de la deuxième partie*/
+    font-size: 36px;
+    text-align:left;
+    position: relative;
+    left: 3%;
+}
+
+.coucou2 > article > h3 + ul + h3 {
+    position: relative;
+    left: 3%;
+}
+
+
+.coucou2 > article > ul > li { /*liste de l'article de la dexième partie*/
+    font-size: 36px;
+}
+
+.block_rouge1, .block_rouge2, .block_rouge3, .block_rouge4 {
+    position: absolute; /* Positionnement absolu relatif à .coucou2 */
+    background-color: red;
+    min-width: 300px;
+    width: 600px; /* Largeur des carrés */
+    height: 200px; /* Hauteur des carrés */
+}
+
+.block_rouge1 { /*mise en place des blocks rouges en arrière plan*/
+    top: 17%;
+    left: 30px;
+}
+
+.block_rouge2 {
+    bottom: 30px;
+    left: 30px;
+}
+
+.block_rouge3 {
+    top: 17%;
+    right: 30px;
+}
+
+.block_rouge4 {
+    bottom: 30px;
+    right: 30px;
+}
+
+/**********************************************************************/
+/*mise en place de la 3eme section, club de sport*/
+/**********************************************************************/
+
+.coucou3 { /*classe définissant la troisième partie*/
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 1%;
+    background-color: #fff;
+    border: 15px solid black;
+    background-image: url(images/profil/club_dauphins_TOEC.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 40% 100%; /*image redimmensionné proportionnellement*/
+    height: auto;
+    width: 96%;
+
+}
+
+.coucou3 > article {
+    position: relative;
+    z-index: 5;
+}
+
+.coucou3 > article > div {  /*conteneur de l'image*/
+    display: flex; /*conteneur de l'image en flex pour pouvoir placer l'image au milieu*/
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.coucou3 > article > div > img { /*image du dauphin du TOEC*/
+    position: absolute;
+    z-index: -1;
+    width: 20%; 
+    height: 80%;
+    top: 1%;
+}
+
+section > article > h2 { /*sous-titre de la troisième partie*/
+    position: relative;
+    left: 4%;
+    font-size: 128px;
+}
+
+section > article > h2 + h3 {
+    position: relative;
+    left: 2%;
+    font-size: 100px;
+}
+
+section > article > h2 + h3 + p {
+    position: relative;
+    left: 2%;
+    width: 40%;
+    font-size: 36px;
+}
+
+.block_bleu1, .block_bleu2 {
+    position: absolute; /* Positionnement absolu relatif à .coucou2 */
+    z-index: -1;
+    background-color: #141E61;
+    width: 50%; /* Largeur des carrés */
+    height: 40%; /* Hauteur des carrés */
+}
+.block_bleu1 {
+    bottom: -7%;
+    right: -2%;
+}
+
+.block_bleu2 {
+    top: -7%;
+    left: -2%;
+}
+
+/**********************************************************************/
+/*mise en place du titre et de la 4eme partie*/
+/**********************************************************************/
+
+.separateur {
+    background-color: #141E61;
+    margin-top: 3%;
+    width: 95%;
+    padding: 2em;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    background-image: url(images/header/logo_flamme_JO.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 200px 150px;
+    color: #fff;
+    margin-left: 1%;
+}
+
+.article1 > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.separateur >  h2 {
+    color: #fff;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > article > table {
+    position: relative;
+    left: 10%;
+    margin-top: 5%;
+    width: 900px;
+    height: 100px;
+}
+
+.article1 > img {
+    position: absolute;
+    width: 10%;
+    height: 950px;
+    right: 5%;
+    top: 42.5%;
+}
+
+th {
+    height: 3em;
+    width: 1em;
+}
+
+td {
+    height: 3em;
+    width: 3em;
+    font-size: 38px;
+    text-align: center;
+}
+
+.article1 > table > thead > tr > th + th + th + th {
+    background-color: #AD5655;
+    background-image: url(images/profil/medaille_3.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 50% 70%;
+    height: 100px;
+    width: 400px;
+}
+
+.article1 > table > thead > tr > th + th + th {
+    background-color: #AD5655;
+    background-image: url(images/profil/medaille_2.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 50% 70%;
+    height: 100px;
+    width: 400px;
+}
+
+.article1 > table > thead > tr > th + th {
+    background-color: #AD5655;
+    background-image: url(images/profil/medaille_1.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 50% 70%;
+    height: 100px;
+    width: 400px;
+}
+
+.article1 > table > thead > tr > th + th + th {
+    background-color: #A2D3FD;
+}
+
+.article1 > table > thead > tr > th + th {
+    background-color: #FFE26E;
+}
+
+td > video {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    left: 1%;
+}
+
+/**********************************************************************/
+/*mise en place de la 5eme partie*/
+/**********************************************************************/
+
+.coucou5 {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    width: 100%; /* Prend toute la largeur de la page */
+    height: auto; /* Prend toute la hauteur de la page */
+    padding: 20px; /* Optionnel, ajoute un peu d'espace autour des éléments */
+}
+
+.coucou5 > article {
+    margin-top: 200px;
+    background-color: #141E61;
+    height: auto;
+    color: #fff;
+    width: 60%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.coucou5 > article > video {
+    width: 500px; /* Ajuste la largeur pour qu'elle s'adapte */
+    height: 300px;
+    background-color: black;
+    position: absolute;
+    left: 45%;
+    margin-top: 50px;
+}
+
+.coucou5 > article > p {
+    font-size: 36px;
+    position: relative;
+}
+
+.coucou5 > article > h3 {
+    font-size: 100px;
+    top: 10%;
+}
+
+.coucou5 > article > p + h3 + p {
+    font-size: 38px;
+}
+
+.coucou5 > img {
+    position: absolute;
+    z-index: -1;
+    height: 80%;
+    top: 50%;
+    left: -100%;
+}
