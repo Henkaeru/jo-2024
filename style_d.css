@@ -696,7 +696,7 @@
         position: absolute;
         right: 0%;
         bottom: 0%;
-        width: 30%;
+        width: 35%;
         height: auto;
         z-index: 1;
     }
@@ -819,6 +819,7 @@
     /*CSS valable sur la troisième partie : Techniques*/
     /*Général sur la section*/
     section:nth-of-type(4){
+        position: relative;
         display: flex;
         flex-direction: row;
         background-color: #4F7FC2;
@@ -826,7 +827,9 @@
     
     /*Gestion de l'image*/
     section:nth-of-type(4)> img {
-        align-self: flex-end;
+        position: sticky;
+        top: 0%;
+        align-self: flex-start;
         margin-left:0px;
         margin-right: 0px;
         width: 30%;
