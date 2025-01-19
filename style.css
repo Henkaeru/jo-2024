@@ -1124,10 +1124,12 @@
          h2{
                 font-size: 48px;
                 font-family: "Cinzel";
+                text-transform: uppercase;
         }
         
         h3{
                 font-size: 36px;
+                font-family: "Cinzel";
                 font-weight: bold;
         }
         
