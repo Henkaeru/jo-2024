@@ -16,7 +16,7 @@
 =================================================================================================================================================*/
 
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 428px) {
 
     body{
         font-family: 'Montserrat';
@@ -60,11 +60,7 @@
         background-image: url("images/image_titre.png");
         background-size: cover;
         color: #fff;
-        height: 265px;
-        width: 428px;
-        position: absolute;
-        left: 0px;
-        top: 76px;
+        position: relative;
     }
     h1:first-of-type::first-letter{
         font-family: "Amoresa"; src:"polices/Amoresa.ttf";
@@ -74,122 +70,122 @@
     }
 
     .Premiere_zone{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 428px;
-        position: absolute;
-        left: 0;
-        top: 340px;
+        width: 100%;
+        position: relative;
+        top: -2.7em;
     }
     .Premiere_zone>img{
-        width: 407px;
-        height: 445px;
-        position: absolute;
-        left:3px;
-        top:260px;
-        z-index: 1;
+        width: 95%;
+        height: auto;
+        position: relative;
+        top:28em;
+        z-index: 0;
     }
     .Premiere_zone>img:nth-of-type(2){
         display: none;
     }
     .Premiere_zone>div{
         background-color: #141E61;
-        width: 232px;
-        height: 117px;
+        width: 54%;
+        height: 25%;
     }
     .Premiere_zone>div:first-of-type{
-        width: 270px;
+        width: 66%;
         position: absolute;
-        top: 0;
-        left:0;
         z-index: -1;
     }
     .Premiere_zone>div:nth-of-type(2){
         background-color: #fff;
-        width: 180px;
-        height: 220px;
+        width: 40%;
+        height: 52%;
         position: absolute;
-        left: 252px ;
-        top: 1px;
+        left: 62% ;
         border-radius: 25px;
+    }
+    .Premiere_zone>div:nth-of-type(2)>img{
+        width: 80%;
+        height: auto;
+        position: relative;
+        top: 15%;
+        z-index: 1;
     }
     .Premiere_zone>div:nth-of-type(3){
         position: absolute;
-        top: 200px;
-        left:196px;
+        top: 47%;
+        left:48.2%;
         z-index: -1;
     }
     .Premiere_zone>div:nth-of-type(4){
         position: absolute;
-        top: 315px;
-        left: 196px;
+        top: 58%;
+        left: 48.2%;
         z-index: -1;
     }
     .Premiere_zone>div:nth-of-type(5){
         position: absolute;
         left: 0;
-        top:515px;
-        z-index: -1;
+        top:125%;
+        z-index: -2;
 
     }
-
-    .Deroulement+img{
-        width: 117px;
-        height: 117px;
-        position: absolute;
-        left: 310px;
-        top:347px;
-    }
-
     .Présentation{
-        width: 408px;
-        height: 276px;
+        width: 95%;
+        height: 68%;
         position: absolute;
-        left:0;
         top: 20px;
         background-color: #fff;
         border-radius: 25px;
     }
     .Présentation>h2{
-        width: 167px;
-        position: absolute;
-        left: 74px;
-        top: 30px;
+        width: 39%;
+        position: relative;
+        left: 17%;
+        top: 10%;
     }
     .Présentation>p{
-        position: absolute;
-        left: 22px;
-        top: 120px;
+        width: 70%;
+        position: relative;
+        left: 2%;
+        top: 25%;
     }
 
 
     .site{
-        width: 408px;
-        height: 276px;
+        width: 98%;
+        height: 68%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: absolute;
         left:20px;
-        top: 335px;
+        top: 78%;
         border-radius: 25px;
         background-color: #fff;
+        z-index: -1;
     }
     .site>h2{
-        width: 247px;
+        width: 58%;
         position: relative;
-        left: 117px;
+        left: 27%;
     }
     .site>div{
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-start;
+        position: relative;
     }
 
-    .site>div>figure>img{
-        width: 170px;
-        height: 155px;
+    .site>div>img{
+        width: 90%;
+        height: auto;
+        position: relative;
+        left: 2%;
+        top: 15%;
+        margin: 1em;
+    }
+
+    .site>div>p{
+        width: 110%;
     }
 
     .Deroulement>div{
@@ -198,9 +194,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: absolute;
-        left: 48px;
-        top: 1075px;
+        position: relative;
+        top: 28em;
     }
     .Deroulement>div>h2{
         margin: 0;
@@ -208,17 +203,25 @@
     .Deroulement>div> hr{
         color: #F50022 ;
         background-color: #F50022;
-        width:331px;
-        height: 4px;
+        width:77%;
+        height: 2px;
         border: solid;
     }
 
     .Deroulement>div>p{
-        width: 290px;
+        width: 68%;
     }
 
-    
+    .Deroulement+img{
+        display: none;
+    }
 
+
+    .Podium{
+        position: absolute;
+        top: 140em;
+        width: 100%;
+    }
     .Podium>div:nth-of-type(2)>article{
         display: flex;
         flex-direction: column;
@@ -236,16 +239,16 @@
 
     .Podium>div:nth-of-type(2)>article>div>div{
         border-radius: 10px;
-        width: 102px;
-        height: 175px;
+        width: 26%;
+        height: 15em;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: 15px 15px 0;
     }
     .Podium>div:nth-of-type(2)>article>div>div>img{
-        width: 18px;
-        height: 26px;
+        width: 18%;
+        height: auto;
     }
     .Podium>div:nth-of-type(2)>article>div>div>div{
         font-size: 13px;
@@ -260,40 +263,42 @@
     .Podium>div:nth-of-type(2)>article>div>div:nth-of-type(3){
         background-color: #AD5655;
     }
-
+    .Podium>div:nth-of-type(2)>article>div>div>figure{
+        width: 25%;
+    }
     .Podium>div:nth-of-type(2)>article>div>div>figure>img{
-        width: 44px;
-        height: 44px;
+        width: 100%;
+        height: auto;
     }
 
     .Podium>div:first-of-type{
         background-color: #141E61;
-        width: 390px;
-        height: 223px;
+        width: 90%;
+        height: 20em;
         position: absolute;
+        left: 0;
+        top: 0;
         z-index: -1;
-        left: 10px;
-        top:1260px;
         border-radius: 10px;
     }
     .Podium>div:nth-of-type(2){
         background-color: #fff;
-        width: 390px;
-        height: 223px;
+        width: 90%;
+        height: 20em;
         position: absolute;
+        left: 1em;
+        top: 1em;
         z-index: 0;
-        left: 20px;
-        top:1270px;
         border-radius: 10px;
     }
     .Podium>div:nth-of-type(3){
         background-color: #F50022;
-        width: 390px;
-        height: 223px;
+        width: 90%;
+        height: 20em;
         position: absolute;
+        left: 2em;
+        top: 2em;
         z-index: -2;
-        left: 30px;
-        top: 1280px;
         border-radius: 10px;
     }
 
@@ -302,39 +307,38 @@
         display: flex;
         flex-direction: column;
         align-content: center;
+        position: relative;
 
     }
 
     .Résultats>h2{
         margin: 0;
-        width: 231px;
+        width: 54%;
         height: 44px;
-        position: absolute;
-        left: 98px;
-        top: 1530px;
+        position: relative;
+        left: 22%;
+        top: 35em;
     }
 
     .Résultats> hr{
         background-color: #141E61;
-        width: 253px;
+        color: #141E61;
+        width: 59%;
         height: 4px;
-        position: absolute;
-        left: 88px;
-        top: 1570px;
+        position: relative;
+        top: 55.5em;
     }
 
     .Résultats>div>table{
-        width: 250;
-        height: 138px;
         margin: 30px;
     } 
 
     .Résultats>div:first-of-type{
-        width: 370px;
+        width: 86%;
         height: 230px;
-        position: absolute;
-        left: 30px;
-        top: 1580px;
+        position: relative;
+        left: 7%;
+        top: 55em;
         background-color: #fff;
         z-index: -1;
         display: flex;
@@ -345,21 +349,21 @@
 
     .Résultats>div:nth-of-type(2){
         background-color: #141E61;
-        width: 117px;
+        width: 27%;
         height: 100px;
         position: absolute;
-        left: 20px;
-        top: 1725px;
+        left: 2%;
+        top: 75em;
         z-index: -2;
     }
 
     .Résultats>div:nth-of-type(3){
         background-color: #141E61;
-        width: 117px;
+        width: 27%;
         height: 100px;
         position: absolute;
-        left: 295px;
-        top: 1725px;
+        left: 71%;
+        top: 75em;
         z-index: -2;
     }
 
@@ -368,21 +372,19 @@
         flex-direction: column;
         align-items: center;
         background-color: #141E61;
-        width: 428px;
-        height: 370px;
-        position: absolute;
-        left: 0;
-        top: 1850px;
+        width: 100%;
+        height: 38em;
+        position: relative;
+        top: 60em;
         z-index: -2;
     }
 
     .Moments>h2{
         color: #fff;
-        width: 165px;
-        height: 40px;
+        width: 39%;
         position: absolute;
-        left: 243px;
-        top: 40px;
+        left: 57%;
+        top: 10%;
     }
 
     .Moments>div{
@@ -398,56 +400,56 @@
 
     .Moments>div>div{
         background-color: #F50022;
-        width: 100px;
-        height: 70px;
+        width: 24%;
+        height: 18%;
     }
 
     .Moments>div>div:first-of-type{
         position: absolute;
         left: 0;
-        top: 20px;
+        top: 5%;
         z-index: -1;
     }
     .Moments>div>div:nth-of-type(2){
         position: absolute;
-        left: 130px;
-        top: 115px;
+        left: 34%;
+        top: 32%;
         z-index: -1;
     }
     .Moments>div>div:nth-of-type(3){
         position: absolute;
-        left: 205px;
-        bottom: 20px;
+        left: 45%;
+        bottom: 7%;
         z-index: -1;
     }
     .Moments>div>div:nth-of-type(4){
         position: absolute;
         right: 0px;
-        top: 185px;
+        top: 48%;
         z-index: -1;
     }
 
     .Moments>div>img{
-        width: 190px;
-        height: 160px;
+        width: 44%;
+        height: auto;
         position: absolute;
         left: 0px;
-        top: 200px;
+        top: 50%;
     }
 
     .Moments>div>figure>img{
-        width:210px ;
-        height:140px ;
+        width:47% ;
+        height:36% ;
         position: absolute;
         left: 10px;
         top: 30px;
     }
 
     .Moments>div>video{
-        width: 200px;
-        height: 140px;
+        width: 47%;
+        height: 36%;
         position: absolute;
-        left: 215px;
+        left: 50%;
         top: 200px;
     }
 
@@ -458,43 +460,41 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        left: 30px;
-        top: 2250px;
+        width: 100%;
+        position: relative;
+        top: 80em
     }
 
     .Récap>h2{
-        width: 378px;
+        width: 88%;
         margin: 0;
-        position: absolute;
-        left: 30px;
-        top:2230px;
+        position: relative;
+        top: -10em;
     }
 
     .Récap>div>table{
-        width: 352px;
-        height: 156px;
+        width: 93%;
+        height: 90%;
         margin: 4vh;
         margin-top: 6vh;
     }
 
     .Récap>div:first-of-type{
         background-color: #fff;
-        width: 377px;
-        height: 208px;
-        position: absolute;
-        left: 30px;
-        top: 2260px;
+        width: 88%;
+        position: relative;
+        top: -15em;
         z-index: -1;
         border-radius: 10px;
     }
 
     .Récap>div:nth-of-type(2){
         background-color: #F50022;
-        width: 377px;
-        height: 187px;
+        width: 88%;
+        height: 80%;
         position: absolute;
-        left: 45px;
-        top: 2293px;
+        left: 10%;
+        top:-9em;
         border-radius: 10px;
         z-index: -2 ;
     }
@@ -504,8 +504,8 @@
     }
 
     footer{
-        position: absolute;
-        top:2500px;
+        position: relative;
+        top: 70em;
         border: 1px solid;
     }
 
@@ -518,7 +518,7 @@
 
 
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 429px) {
     
     body{
         font-family: 'Montserrat';
@@ -708,13 +708,10 @@
         height: 75%;
     }
 
-    .site>div>figure{
+    .site>div>img{
         width: 41%;
         height: auto;
-    }
-    .site>div>figure>img{
-        width: 100%;
-        height: auto;
+        margin: 1em;
     }
     
 
