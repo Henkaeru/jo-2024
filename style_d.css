@@ -87,7 +87,7 @@ section:nth-of-type(2) > article:first-of-type > img {
 }
 
 section:nth-of-type(2) > article:first-of-type > div > h2:first-of-type,
-section:nth-of-type(2) > article:nth-of-type(2) > img:last-of-type
+section:nth-of-type(2) > article:nth-of-type(2) > div > img:last-of-type
 {
     display: none;
 }
@@ -391,16 +391,25 @@ section:nth-of-type(6){
 }
 
 section:nth-of-type(6) > div{
-    padding-left: 12px;
-    padding-right: 35px;
     width: 8%;
     flex-shrink: 0;
 }
 
-section:nth-of-type(6) > div > img {
+section:nth-of-type(6) > div > img:first-of-type {
     position: absolute;
+    width: 10%;
     z-index: 1;
-    bottom:0px;
+    bottom: 0px;
+    display: flex;
+    z-index: 1;
+}
+
+section:nth-of-type(6) > div > img:nth-of-type(2){
+    position: relative;
+    width: 70%;
+    margin-left: 28%;
+    border-radius: 50%;
+    z-index: 3;
 }
 
 section:nth-of-type(6) > div > a >p {
@@ -516,7 +525,7 @@ table > tbody > tr {
 section:nth-of-type(7) > img:last-of-type {
     width: 100%;
     position: absolute;
-    top:54%;
+    top:50%;
     left: -50%;
     z-index: -1;
 }
@@ -536,7 +545,7 @@ section:nth-of-type(7) > img:last-of-type {
     h1 {
         margin: 0px;
         width: 100%;
-        height: 1100px;
+        height: auto;
         background-image: url(images/discipline/image_titre.png);
         font-size: 48;
     }
@@ -872,56 +881,98 @@ section:nth-of-type(7) > img:last-of-type {
     /*CSS valable sur la cinquième partie : Profils*/
     /*mettre les deux barres en bas, et les photos des gens*/
     
-    section:nth-of-type(6){
-        position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        margin-bottom: 0%;
-    }
-    
-    section:nth-of-type(6) > div{
-        padding-left: 12px;
-        padding-right: 35px;
-        width: 8%;
-        flex-shrink: 0;
-    }
-    
-    section:nth-of-type(6) > div > img {
-        position: absolute;
-        height: 100%;
-        z-index: 1;
-        bottom:0px;
-    }
-    
-    section:nth-of-type(6) > div > a >p {
-        position: relative;
-        z-index: 2;
-        align-items: column;
-        padding-left: 20px;
-        font-size: 10px;
-    }
-    
-    main > div {
-        width: 100%;
-    }
-    
-    main > div:first-of-type {
-        position: relative;
-        height: 91px;
-        background-color: #FFE26E;
-        z-index: 1;
-    }
-    
-    main > div:nth-of-type(2) {
-        position: relative;
-        top: -75px;
-        height: 59px;
-        background-color: #AD5655;
-        z-index: 2;
-    }
-    
+section:nth-of-type(6){
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0%;
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(6) > div{
+    width: 8%;
+    flex-shrink: 0;
+    margin-left: 5%;
+}
+
+section:nth-of-type(6) > div:nth-of-type(5),
+section:nth-of-type(6) > div:nth-of-type(6),
+section:nth-of-type(6) > div:nth-of-type(7),
+section:nth-of-type(6) > div:nth-of-type(8){
+    position: absolute;
+    bottom : -150px;
+}
+
+section:nth-of-type(6) > div:nth-of-type(5){
+    left: 24%;
+}
+
+section:nth-of-type(6) > div:nth-of-type(6){
+    left: 37%;
+}
+
+section:nth-of-type(6) > div:nth-of-type(7){
+    left: 50%;
+}
+
+section:nth-of-type(6) > div:nth-of-type(8){
+    left: 63%;
+}
+
+section:nth-of-type(6) > div:nth-of-type(5) > img:first-of-type,
+section:nth-of-type(6) > div:nth-of-type(6) > img:first-of-type,
+section:nth-of-type(6) > div:nth-of-type(7) > img:first-of-type,
+section:nth-of-type(6) > div:nth-of-type(8) > img:first-of-type{
+    width: 135%;
+    display: flex;
+    z-index: 3;
+}
+
+section:nth-of-type(6) > div > img:first-of-type {
+    position: absolute;
+    width: 10%;
+    z-index: 1;
+    bottom: 0px;
+    display: flex;
+    z-index: 1;
+}
+
+section:nth-of-type(6) > div > img:nth-of-type(2){
+    position: relative;
+    width: 70%;
+    margin-left: 28%;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+section:nth-of-type(6) > div > a >p {
+    position: relative;
+    z-index: 4;
+    align-items: column;
+    padding-left: 20px;
+    font-size: 10px;
+}
+
+main > div {
+    width: 100%;
+}
+
+main > div:first-of-type {
+    position: relative;
+    height: 91px;
+    background-color: #FFE26E;
+    z-index: 1;
+}
+
+main > div:nth-of-type(2) {
+    position: relative;
+    top: -75px;
+    height: 80px;
+    background-color: #AD5655;
+    z-index: 2;
+}
+
     
     /*CSS valable sur la cinquième partie : Tableau*/
     
@@ -937,7 +988,7 @@ section:nth-of-type(7) > img:last-of-type {
     
     section:nth-of-type(7) > img:first-of-type {
         position: absolute;
-        height: 20%;
+        height: 15%;
         left:-85px;
         top:-200px;
         z-index: 3;
@@ -994,10 +1045,6 @@ section:nth-of-type(7) > img:last-of-type {
         border-color: #AD5655;
     }
     
-    table > tbody > tr{
-        background-color: white;
-    }
-    
     table > tbody > tr {
         text-align: center;
         border-style: solid;
@@ -1005,6 +1052,7 @@ section:nth-of-type(7) > img:last-of-type {
         border-width: 1px;
         border-radius: 25px;
         font-size: 10px;
+        background-color: white;
     }
     
     section:nth-of-type(7) > img:last-of-type {
