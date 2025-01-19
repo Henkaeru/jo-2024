@@ -30,28 +30,11 @@
         color: #fff;
         height: 850px;
         width: 100%;
-        font-family: "Cinzel";
-        font-size: 148px;
         margin:0;
     }
 
     .lettrine{
         font-family: "Amoresa";
-    }
-
-    h2{
-        font-size: 48px;
-        font-family: "Cinzel";
-        text-transform: uppercase;
-    }
-
-    h3{
-        font-size: 36px;
-        font-weight: bold;
-    }
-
-    p{
-        font-size: 16px;
     }
 
     li{
@@ -592,28 +575,11 @@
         background-size: cover;
         color: #fff;
         font-family: "Cinzel";
-        font-size: 48px;
-        padding-bottom: 90px;
         width: 100%;
     }
     
     .lettrine{
         font-family: "Amoresa";
-    }
-
-    h2{
-        font-size: 16px;
-        font-family:"Cinzel";
-        text-transform: uppercase;
-    }
-    
-    h3{
-        font-size: 13px;
-        font-weight: bold;
-    }
-    
-    p{
-        font-size: 10px;
     }
     
     li{
