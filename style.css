@@ -1,64 +1,144 @@
-/*polices et taille de police pour pc*/
+.header{
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-body{
-    font-family: montserrat;
-    font-size: 16;
+    @media screen and (max-width: 428px) {
+        header {
+        }
+    }
+
+    @media screen and (min-width: 429px) {
+        header {
+            background-color: #141E61;
+            padding: 0 1rem 0.5rem 0.5rem;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 25px 25px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+        }
+
+        header img {
+            height: 5em;
+            padding: 0.3em;
+            margin-right: 22%;
+
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 18%;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 2em;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #FFE26E;
+        }
+
+        header + * {
+            margin-top: 5%;
+        }
+    }
 }
 
-h1{
-    font-size: 128;
-    font-family: Amoresa; src:"./Amoresa.ttf"
+.footer{
+    footer div > img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    @media screen and (max-width: 428px) {
+        footer {
+        }
+    }
+    
+    
+    @media screen and (min-width: 429px) {
+        footer {
+            background-color: #141E61;
+            border-radius: 25px 25px 0 0;
+            display: flex;
+            gap: 8%;
+            padding: 2%;
+        }
+    
+        footer p {
+            color: white;
+        }
+    
+        footer div > p {
+            margin-top: auto;
+        }
+    
+        footer div {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+        }
+    
+        footer > div:nth-of-type(1) > img:nth-of-type(1) {
+            height: 12%;
+            width: min-content;
+            margin-top: 15%;
+        }
+    
+        footer > div:nth-of-type(2) {
+            align-items: center;
+        }
+    
+        footer > div:nth-of-type(2) > img:nth-of-type(1) {
+            width: 70%;
+            height: auto;
+        }
+    
+        footer > div:nth-of-type(3) {
+            flex-direction: row;
+            gap: 4%;
+        }
+    
+        footer > div:nth-of-type(3) > img:nth-of-type(1) {
+            height: 40%;
+            width: auto;
+            margin-top: auto;
+        }
+    
+        footer > div:nth-of-type(3) > div {
+            margin-right: 10%;
+        }
+    
+        footer > div:nth-of-type(3) > div > p {
+            margin-left: auto;
+        }
+    }
 }
 
-h2{
-    font-size: 48;
-    font-family: Cinzel; src:"./Cinzel-Regular.otf"
+.acceuil{ /*Css de la page d'acceuil*/
+
 }
 
-h3{
-    font-size: 36;
+.discipline{ /*Css de la page de Discipline*/
+    
 }
 
-main {
-    width: 1440px;
-    height: auto;
+.epreuve{ /*Css de la page d'épreuve*/
+
 }
 
-/*mise en forme des images*/
+.profil{ /*Css de la page de profil*/
 
-section > img:first-of-type {
-    float: right;
-    width: 936px;
-    height: 872px;
 }
-
-section > figure > img:first-child {
-    width: 209px;
-    height: 204px;
-}
-
-section > figure > img:last-child {
-    width: 246.28px;
-    height: 135px;
-}
-
-section > nav > img {
-    width: 72px;
-    height: 72px;
-}
-
-
-/*mise en forme*/
-header {
-    background-color: #141E61;
-}
-
-header > nav > ul >li {
-    display: inline-block;
-}
-
-nav> nav > ul >li>a {
-    color: white;
-    list-style-type: none;
-}
-
