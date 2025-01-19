@@ -1,14 +1,15 @@
-/*CSS valable sur toute la feuille*/
-/*profils
-caption tableau
-lignes du tableau
-
-POURQUOI le div s'affiche pas dans le titre
-*/
-
 /*=============================================================================================================================================== 
 =                                                           CSS POUR ECRAN LARGE                                                                =
 =================================================================================================================================================*/
+
+@font-face {
+    font-family: 'Amoresa';
+    src: url('polices/Amoresa.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Cinzel';
+    src: url('polices/Cinzel-Regular.ttf') format('truetype');
+}
 
 @media screen and (min-width: 1024px) {
     
@@ -19,29 +20,34 @@ POURQUOI le div s'affiche pas dans le titre
         font-family: "Montserat";
     }
 
+    body{
+        margin: 0%;
+    }
+
     h1 {
         background-image: url("images/epreuve/image_titre.png");
         background-size: cover;
         color: #fff;
         height: 850px;
         width: 100%;
-        font-family: "Cinzel"; src:"polices/Cinzel-regular.ttf";
+        font-family: "Cinzel";
         font-size: 148px;
+        margin:0;
     }
 
     .lettrine{
-        font-family: "Amoresa"; src:"polices/Amoresa.ttf"
+        font-family: "Amoresa";
     }
 
     h2{
         font-size: 48px;
-        font-family: Cinzel; src:"polices/Cinzel-regular.ttf";
+        font-family: "Cinzel";
         text-transform: uppercase;
     }
 
     h3{
         font-size: 36px;
-        font-style: bold;
+        font-weight: bold;
     }
 
     p{
@@ -124,7 +130,7 @@ POURQUOI le div s'affiche pas dans le titre
     section:nth-of-type(2) > article:first-of-type > div > img:nth-of-type(2){
         position: absolute;
         right: 0%;
-        bottom: 0%;
+        top: 0%;
         width: 30%;
         z-index: 1;
     }
@@ -166,7 +172,7 @@ POURQUOI le div s'affiche pas dans le titre
         position: absolute;
         right: 0%;
         bottom: 0%;
-        width: 40%;
+        width: 30%;
     }
 
     /*Les formes de couleurs*/
@@ -204,7 +210,7 @@ POURQUOI le div s'affiche pas dans le titre
 
     /*Ce qui n'apaprait pas dans ce format*/
     section:nth-of-type(2) > article:first-of-type > div > h2:first-of-type,
-    section:nth-of-type(2) > article:nth-of-type(2) > div > img:nth-of-type(2)
+    section:nth-of-type(2) > article:nth-of-type(3) > div > img:nth-of-type(2)
     {
         display: none;
     }
@@ -447,7 +453,6 @@ POURQUOI le div s'affiche pas dans le titre
     section:nth-of-type(6) > div > a > p {
         position: relative;
         z-index: 2;
-        align-items: column;
         padding-left: 20px;
         font-size: 16px;
     }
@@ -551,10 +556,8 @@ POURQUOI le div s'affiche pas dans le titre
     table > tbody > tr {
         background-color: white;
         text-align: center;
-        border-style: solid;
-        border-color: #4F7FC2;
-        border-width: 1px;
         border-radius: 25px;
+        box-shadow: inset 0 0 1px 2px #4F7FC2;
         width: 2%;
     }
 
@@ -566,7 +569,6 @@ POURQUOI le div s'affiche pas dans le titre
         left: -50%;
         z-index: -1;
     }
-
 }
 
 /*=============================================================================================================================================== 
@@ -581,28 +583,33 @@ POURQUOI le div s'affiche pas dans le titre
         padding: 0px;
     }
 
+    body{
+        margin: 0%;
+    }
+
     h1 {
         background-image: url("images/epreuve/image_titre.png");
         background-size: cover;
         color: #fff;
-        font-family: "Cinzel"; src:"polices/Cinzel-regular.ttf";
+        font-family: "Cinzel";
         font-size: 48px;
         padding-bottom: 90px;
+        width: 100%;
     }
     
     .lettrine{
-        font-family: "Amoresa"; src:"polices/Amoresa.ttf"
+        font-family: "Amoresa";
     }
 
     h2{
         font-size: 16px;
-        font-family:"Cinzel"; src:"polices/Cinzel-Regular.ttf";
+        font-family:"Cinzel";
         text-transform: uppercase;
     }
     
     h3{
         font-size: 13px;
-        font-style: bold;
+        font-weight: bold;
     }
     
     p{
@@ -689,7 +696,7 @@ POURQUOI le div s'affiche pas dans le titre
         position: absolute;
         right: 0%;
         bottom: 0%;
-        width: 30%;
+        width: 35%;
         height: auto;
         z-index: 1;
     }
@@ -812,6 +819,7 @@ POURQUOI le div s'affiche pas dans le titre
     /*CSS valable sur la troisième partie : Techniques*/
     /*Général sur la section*/
     section:nth-of-type(4){
+        position: relative;
         display: flex;
         flex-direction: row;
         background-color: #4F7FC2;
@@ -819,7 +827,9 @@ POURQUOI le div s'affiche pas dans le titre
     
     /*Gestion de l'image*/
     section:nth-of-type(4)> img {
-        align-self: flex-end;
+        position: sticky;
+        top: 0%;
+        align-self: flex-start;
         margin-left:0px;
         margin-right: 0px;
         width: 30%;
@@ -882,7 +892,6 @@ POURQUOI le div s'affiche pas dans le titre
         display: inline-block;
         width: 70%;
         background-color: #141E61;
-        padding-left: -6%;
         padding-right: 2%;
         margin-bottom: 3%;
         z-index: 2;
@@ -942,80 +951,83 @@ POURQUOI le div s'affiche pas dans le titre
         z-index: 1;
     }
     
+
     /*CSS valable sur la cinquième partie : Profils*/
     /*Général sur la section*/
+    /*Pas réussi*/
     section:nth-of-type(6){
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: center;
         margin-bottom: 0%;
-        flex-wrap: wrap;
     }
 
     section:nth-of-type(6) > div{
-        width: 8%;
+        width: 9%;
         flex-shrink: 0;
-        margin-left: 5%;
-    }
-
-    section:nth-of-type(6) > div:nth-of-type(5),
-    section:nth-of-type(6) > div:nth-of-type(6),
-    section:nth-of-type(6) > div:nth-of-type(7),
-    section:nth-of-type(6) > div:nth-of-type(8){
-        position: absolute;
-        bottom : -150px;
-    }
-
-    section:nth-of-type(6) > div:nth-of-type(5){
-        left: 25%;
-    }
-
-    section:nth-of-type(6) > div:nth-of-type(6){
-        left: 37%;
-    }
-
-    section:nth-of-type(6) > div:nth-of-type(7){
-        left: 50%;
-    }
-
-    section:nth-of-type(6) > div:nth-of-type(8){
-        left: 63%;
-    }
-
-    section:nth-of-type(6) > div:nth-of-type(5) > img:first-of-type,
-    section:nth-of-type(6) > div:nth-of-type(6) > img:first-of-type,
-    section:nth-of-type(6) > div:nth-of-type(7) > img:first-of-type,
-    section:nth-of-type(6) > div:nth-of-type(8) > img:first-of-type{
-        width: 150%;
-        display: flex;
-        z-index: 3;
-    }
-
-    section:nth-of-type(6) > div > img:first-of-type {
-        position: absolute;
-        width: 10%;
-        z-index: 1;
-        bottom: 0px;
-        display: flex;
-        z-index: 1;
+        margin: 5%;
     }
 
     section:nth-of-type(6) > div > img:nth-of-type(2){
         position: relative;
         width: 70%;
-        margin-left: 28%;
+        margin-left: 50%;
         border-radius: 50%;
         z-index: 4;
     }
 
-    section:nth-of-type(6) > div > a >p {
+    section:nth-of-type(6) > div > img:first-of-type {
+        position: absolute;
+        width: 15%;
+        bottom: 0px;
+        display: flex;
+        z-index: 3;
+    }
+
+    section:nth-of-type(6) > div:nth-of-type(5) > img:first-of-type,
+    section:nth-of-type(6) > div:nth-of-type(6) > img:first-of-type,
+    section:nth-of-type(6) > div:nth-of-type(7) > img:first-of-type,
+    section:nth-of-type(6) > div:nth-of-type(8) > img:first-of-type
+    {
+        margin: 15% 0 0 5%;
+        width: 180%;
+        z-index: 3;
+    }
+
+    section:nth-of-type(6) > div > a > p {
         position: relative;
         z-index: 4;
-        align-items: column;
-        padding-left: 20px;
+        padding-left: 20%;
         font-size: 10px;
+        line-height: 80%;
+        word-wrap: break-word;
+        width: 140%;
     }
+
+    section:nth-of-type(6) > div:nth-of-type(5){
+        position: absolute;
+        bottom: -120%;
+        left: 10%;
+    }
+    section:nth-of-type(6) > div:nth-of-type(6){
+        position: absolute;
+        bottom: -120%;
+        left: 30%;
+    }
+    section:nth-of-type(6) > div:nth-of-type(7){
+        position: absolute;
+        bottom: -120%;
+        left: 50%;
+    }
+
+    section:nth-of-type(6) > div:nth-of-type(8){
+        position: absolute;
+        bottom: -120%;
+        left: 70%;
+    }
+
+
 
     /*Gestion des trains marrons et jaunes*/
     main > div {
@@ -1049,31 +1061,22 @@ POURQUOI le div s'affiche pas dans le titre
         flex-direction: row-reverse;
         justify-content: center;
     }
-
-    section:nth-of-type(7) > div > img{
-        height: 100%;
-        width: 30%;
-    }
     
     section:nth-of-type(7) > img:first-of-type {
         position: absolute;
-        height: 15%;
-        left:-85px;
-        top:-200px;
+        height: 20%;
+        left:-15%;
+        top:-20%;
         z-index: 3;
     }
     
     /*Gestion du tableau*/
     table {
         width: 65%;
-        margin-right: 5%;
+        margin: 0 5% 5%;
     }
     
     tr{
-        height: 2%;
-        border-style: solid;
-        border-color: black;
-        border-width: 1px;
         margin-bottom: 15px;
     }
     
@@ -1084,9 +1087,9 @@ POURQUOI le div s'affiche pas dans le titre
         background-color: #B0125E;
         color: white;
         height: 30%;
-        margin-bottom: 15px;
+        margin-bottom: 1%;
         font-size: 13px;
-        font-style: bold;
+        font-weight: bold;
     }
     
     /*Gestion de la première ligne du tableau*/
@@ -1119,12 +1122,14 @@ POURQUOI le div s'affiche pas dans le titre
     /*Gestion du corps du tableau*/
     table > tbody > tr {
         text-align: center;
-        border-style: solid;
-        border-color: #4F7FC2;
-        border-width: 1px;
         border-radius: 25px;
         font-size: 10px;
         background-color: white;
+        box-shadow: inset 0 0 1px 2px #4F7FC2;
+    }
+
+    section:nth-of-type(7) > div > img{
+        width: 30%;
     }
     
     /*Gestion de l'image de fond*/
