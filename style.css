@@ -1,12 +1,581 @@
-.header{
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    /*polices*/
 
-    @media screen and (max-width: 428px) {
-        header {
-        }
+
+    @font-face {
+        font-family: Amoresa;
+        src: url(polices/Amoresa.ttf);
     }
 
-    @media screen and (min-width: 429px) {
+    @font-face {
+        font-family: Cinzel;
+        src: url(polices/Cinzel-Regular.ttf);
+    }
+
+/*=============================================================================================================================================== 
+=                                                           CSS POUR PETIT ECRAN                                                                =
+=================================================================================================================================================*/
+
+@media screen and (max-width: 428px) {
+        
+    body{
+        font-family: 'Montserrat';
+        font-size: 10px;
+        color: #000;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 48px;
+        font-family: "Cinzel";
+    }
+
+    
+    h2{
+        font-size: 16px;
+        font-family: "Cinzel";
+    }
+
+    h3{
+        font-size: 13px;
+        font-weight: bold;
+    }
+        
+        .acceuil{ /*Css de la page d'acceuil*/
+        
+        }
+        
+        .discipline{ /*Css de la page de Discipline*/
+            
+        }
+        
+        .epreuve{ /*Css de la page d'épreuve*/
+                
+            /*Modifications générales*/
+        
+            table{
+                border-collapse: collapse;
+                
+            }
+        
+            thead{
+                background-color: #FFE26E;
+            }
+            tbody{
+                background-color: #fff;
+            }
+            th,td{
+                border: 1px solid #000;
+            }
+        
+        
+            /*Modifications liées au Titre*/
+        
+        
+             section>div:first-of-type{
+                background-image: url("images/image_titre.webp");
+                background-size: cover;
+                color: #fff;
+                position: relative;
+            }
+            h1:first-of-type::first-letter{
+                font-family: "Amoresa"; src:"polices/Amoresa.ttf";
+            }
+             section>div:first-of-type>h1:nth-of-type(2){
+                font-size: 32px;
+            }
+        
+            /*Modifications liées à la présentation de l'épreuve et du site */
+        
+             section>div:nth-of-type(2){
+                width: 100%;
+                position: relative;
+                top: -2.7em;
+            }
+             section>div:nth-of-type(2)>img{
+                width: 95%;
+                height: auto;
+                position: relative;
+                top:28em;
+                z-index: 0;
+            }
+             section>div:nth-of-type(2)>img:nth-of-type(2){
+                display: none;
+            }
+             section>div:nth-of-type(2)>div{
+                background-color: #141E61;
+                width: 54%;
+                height: 25%;
+            }
+             section>div:nth-of-type(2)>div:first-of-type{
+                width: 66%;
+                position: absolute;
+                z-index: -1;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(2){
+                background-color: #fff;
+                width: 40%;
+                height: 52%;
+                position: absolute;
+                left: 62% ;
+                border-radius: 25px;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(2)>img{
+                width: 80%;
+                height: auto;
+                position: relative;
+                top: 15%;
+                z-index: 1;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(3){
+                position: absolute;
+                top: 47%;
+                left:48.2%;
+                z-index: -1;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(4){
+                position: absolute;
+                top: 58%;
+                left: 48.2%;
+                z-index: -1;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(5){
+                position: absolute;
+                left: 0;
+                top:125%;
+                z-index: -2;
+        
+            }
+             section>div:nth-of-type(2)>article:first-of-type{
+                width: 95%;
+                height: 68%;
+                position: absolute;
+                top: 20px;
+                background-color: #fff;
+                border-radius: 25px;
+            }
+             section>div:nth-of-type(2)>article:first-of-type>h2{
+                width: 39%;
+                position: relative;
+                left: 17%;
+                top: 10%;
+            }
+             section>div:nth-of-type(2)>article:first-of-type>p{
+                width: 70%;
+                position: relative;
+                left: 2%;
+                top: 25%;
+            }
+        
+        
+             section>div:nth-of-type(2)>article:nth-of-type(2){
+                width: 98%;
+                height: 68%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                left:20px;
+                top: 78%;
+                border-radius: 25px;
+                background-color: #fff;
+                z-index: -1;
+            }
+             section>div:nth-of-type(2)>article:nth-of-type(2)>h2{
+                width: 58%;
+                position: relative;
+                left: 27%;
+            }
+             section>div:nth-of-type(2)>article:nth-of-type(2)>div{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-start;
+                position: relative;
+            }
+        
+             section>div:nth-of-type(2)>article:nth-of-type(2)>div>img{
+                width: 90%;
+                height: auto;
+                position: relative;
+                left: 2%;
+                top: 15%;
+                margin: 1em;
+            }
+        
+             section>div:nth-of-type(2)>article:nth-of-type(2)>div>p{
+                width: 110%;
+            }
+        
+            
+            /*Modifications liées à l'explication du Déroulement de l'épreuve*/
+        
+             section>article:first-of-type>div{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 28em;
+            }
+             section>article:first-of-type>div>h2{
+                margin: 0;
+            }
+             section>article:first-of-type>div> hr{
+                color: #F50022 ;
+                background-color: #F50022;
+                width:77%;
+                height: 2px;
+                border: solid;
+            }
+        
+             section>article:first-of-type>div>p{
+                width: 68%;
+            }
+        
+             section>article:first-of-type+img{
+                display: none;
+            }
+        
+            
+            /*Modifications liées au podium*/
+        
+        
+             section>div:nth-of-type(3){
+                position: absolute;
+                top: 140em;
+                width: 100%;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>h2{
+                margin: 0;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+            }
+        
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div{
+                border-radius: 10px;
+                width: 26%;
+                height: 15em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 15px 15px 0;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>img{
+                width: 18%;
+                height: auto;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>div{
+                font-size: 13px;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:first-of-type{
+                background-color: #FFE26E;
+            }
+        
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(2){
+                background-color: #A2D3FD;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(3){
+                background-color: #AD5655;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>figure{
+                width: 25%;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>figure>img{
+                width: 100%;
+                height: auto;
+            }
+        
+             section>div:nth-of-type(3)>div:first-of-type{
+                background-color: #141E61;
+                width: 90%;
+                height: 20em;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: -1;
+                border-radius: 10px;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2){
+                background-color: #fff;
+                width: 90%;
+                height: 20em;
+                position: absolute;
+                left: 1em;
+                top: 1em;
+                z-index: 0;
+                border-radius: 10px;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(3){
+                background-color: #F50022;
+                width: 90%;
+                height: 20em;
+                position: absolute;
+                left: 2em;
+                top: 2em;
+                z-index: -2;
+                border-radius: 10px;
+            }
+        
+            /*Modifications liées au tableau des résultats*/
+             section>article:nth-of-type(2){
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                position: relative;
+        
+            }
+        
+             section>article:nth-of-type(2)>h2{
+                margin: 0;
+                width: 54%;
+                height: 44px;
+                position: relative;
+                left: 22%;
+                top: 35em;
+            }
+        
+             section>article:nth-of-type(2)> hr{
+                background-color: #141E61;
+                color: #141E61;
+                width: 59%;
+                height: 4px;
+                position: relative;
+                top: 55.5em;
+            }
+        
+             section>article:nth-of-type(2)>div>table{
+                margin: 30px;
+            } 
+        
+             section>article:nth-of-type(2)>div:first-of-type{
+                width: 86%;
+                height: 230px;
+                position: relative;
+                left: 7%;
+                top: 55em;
+                background-color: #fff;
+                z-index: -1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                border-radius: 10px;
+            }
+        
+             section>article:nth-of-type(2)>div:nth-of-type(2){
+                background-color: #141E61;
+                width: 27%;
+                height: 100px;
+                position: absolute;
+                left: 2%;
+                top: 75em;
+                z-index: -2;
+            }
+        
+             section>article:nth-of-type(2)>div:nth-of-type(3){
+                background-color: #141E61;
+                width: 27%;
+                height: 100px;
+                position: absolute;
+                left: 71%;
+                top: 75em;
+                z-index: -2;
+            }
+        
+            /*Modifications liées au Moments Forts de l'épreuve*/
+        
+             section>article:nth-of-type(3){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #141E61;
+                width: 100%;
+                height: 38em;
+                position: relative;
+                top: 60em;
+                z-index: -2;
+            }
+        
+             section>article:nth-of-type(3)>h2{
+                color: #fff;
+                width: 39%;
+                position: absolute;
+                left: 57%;
+                top: 10%;
+            }
+        
+             section>article:nth-of-type(3)>div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+        
+             section>article:nth-of-type(3)>div>figure{
+                width: 200px;
+                height: 140px;
+            }
+        
+             section>article:nth-of-type(3)>div>div{
+                background-color: #F50022;
+                width: 24%;
+                height: 18%;
+            }
+        
+             section>article:nth-of-type(3)>div>div:first-of-type{
+                position: absolute;
+                left: 0;
+                top: 5%;
+                z-index: -1;
+            }
+             section>article:nth-of-type(3)>div>div:nth-of-type(2){
+                position: absolute;
+                left: 34%;
+                top: 32%;
+                z-index: -1;
+            }
+             section>article:nth-of-type(3)>div>div:nth-of-type(3){
+                position: absolute;
+                left: 45%;
+                bottom: 7%;
+                z-index: -1;
+            }
+             section>article:nth-of-type(3)>div>div:nth-of-type(4){
+                position: absolute;
+                right: 0px;
+                top: 48%;
+                z-index: -1;
+            }
+        
+             section>article:nth-of-type(3)>div>img{
+                width: 44%;
+                height: auto;
+                position: absolute;
+                left: 0px;
+                top: 50%;
+            }
+        
+             section>article:nth-of-type(3)>div>figure>img{
+                width:47% ;
+                height:36% ;
+                position: absolute;
+                left: 10px;
+                top: 30px;
+            }
+        
+             section>article:nth-of-type(3)>div>video{
+                width: 47%;
+                height: 36%;
+                position: absolute;
+                left: 50%;
+                top: 200px;
+            }
+        
+            /*Modifications liées aux Récapitulatif des records*/
+        
+             section>article:nth-of-type(4){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                position: relative;
+                top: 80em
+            }
+        
+             section>article:nth-of-type(4)>h2{
+                width: 88%;
+                margin: 0;
+                position: relative;
+                top: -10em;
+            }
+        
+             section>article:nth-of-type(4)>div>table{
+                width: 93%;
+                height: 90%;
+                margin: 4vh;
+                margin-top: 6vh;
+            }
+        
+             section>article:nth-of-type(4)>div:first-of-type{
+                background-color: #fff;
+                width: 88%;
+                position: relative;
+                top: -15em;
+                z-index: -1;
+                border-radius: 10px;
+            }
+        
+             section>article:nth-of-type(4)>div:nth-of-type(2){
+                background-color: #F50022;
+                width: 88%;
+                height: 80%;
+                position: absolute;
+                left: 10%;
+                top:-9em;
+                border-radius: 10px;
+                z-index: -2 ;
+            }
+        
+             section>article:nth-of-type(4)>img{
+                display: none;
+            }
+        
+            /*Modifications liées au footer*/
+        
+            footer{
+                position: relative;
+                top: 70em;
+                border: 1px solid;
+            }
+                }
+
+        .profil{ /*Css de la page de profil*/
+        
+        }
+
+
+
+/*=============================================================================================================================================== 
+=                                                           CSS POUR ECRAN LARGE                                                                =
+=================================================================================================================================================*/
+
+        
+@media screen and (min-width: 429px) {
+
+        body{
+                font-family: 'Montserrat';
+                font-size: 16px;
+                color: #000;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between  ;
+                align-items: center;    
+        }
+        
+        h1{
+                font-size: 128px;
+                font-family: "Cinzel";
+         }
+            
+         h2{
+                font-size: 48px;
+                font-family: "Cinzel";
+        }
+        
+        h3{
+                font-size: 36px;
+                font-weight: bold;
+        }
+        
         header {
             background-color: #141E61;
             padding: 0 1rem 0.5rem 0.5rem;
@@ -53,23 +622,489 @@
         header + * {
             margin-top: 5%;
         }
-    }
-}
-
-.footer{
-    footer div > img {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    @media screen and (max-width: 428px) {
-        footer {
+        
+        .acceuil{ /*Css de la page d'acceuil*/
+        
         }
-    }
-    
-    
-    @media screen and (min-width: 429px) {
-        footer {
+        
+        .discipline{ /*Css de la page de Discipline*/
+            
+        }
+        
+        .epreuve{ /*Css de la page d'épreuve*/
+                  
+            /*Modifications générales*/
+        
+            table{
+                border-collapse: collapse;
+                
+            }
+        
+            thead{
+                background-color: #FFE26E;
+            }
+            tbody{
+                background-color: #fff;
+            }
+            th,td{
+                border: 1px solid #000;
+            }
+        
+            /*Modifications liées au Titre*/
+        
+             section>div:first-of-type{
+                background-image: url("images/image_titre.webp");
+                background-size: cover;
+                color: #fff;
+                height: 895px;
+                width: 100%;
+            }
+            h1:first-of-type::first-letter{
+                font-family: "Amoresa"; src:"polices/Amoresa.ttf";
+            }
+             section>div:first-of-type>h1:nth-of-type(2){
+                font-size: 110px;
+                position: relative;;
+                bottom: 0;
+            }
+        
+            /*Modifications liées à la présentation de l'épreuve et du site */
+        
+             section>div:nth-of-type(2){
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                position: relative;
+            }
+             section>div:nth-of-type(2)>img:first-of-type{
+                display: none;
+            }
+             section>div:nth-of-type(2)>img{
+                width: 30%;
+                height: 100%;
+            }
+             section>div:nth-of-type(2)>div{
+                background-color: #141E61;
+                width: 25%;
+                height: 45%;
+            }
+             section>div:nth-of-type(2)>div:first-of-type{
+                position: absolute;
+                top: 0;
+                left:0;
+                z-index: -1;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(2){
+                display: none;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(3){
+                position: absolute;
+                top:70%;
+                left: 15%;
+                z-index: -1;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(4){
+                position: absolute;
+                left: 60%;
+                top: 70%;
+                z-index: -1;
+            }
+             section>div:nth-of-type(2)>div:nth-of-type(5){
+                position: absolute;
+                right: 0;
+                top:0;
+                z-index: -1;
+        
+            }
+             section>div:nth-of-type(2)>article:first-of-type{
+                width: 44%;
+                height: auto;
+                position: relative;
+                left:0;
+                top: 30px;
+                background-color: #fff;
+                border-radius: 25px;
+            }
+             section>div:nth-of-type(2)>article:first-of-type>p{
+                width: 90%;
+            }
+             section>div:nth-of-type(2)>article:nth-of-type(2){
+                width: 44%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                left: 0;
+                top: 30px;
+                border-radius: 25px;
+                background-color: #fff;
+            }
+        
+             section>div:nth-of-type(2)>article:nth-of-type(2)>div{
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-start;
+                width: 100%;
+                height: 56%;
+            }
+             section>div:nth-of-type(2)>article:nth-of-type(2)>div>p{
+                width: 59%;
+                height: 75%;
+            }
+        
+             section>div:nth-of-type(2)>article:nth-of-type(2)>div>img{
+                width: 41%;
+                height: auto;
+                margin: 1em;
+            }
+             section>div:nth-of-type(2)>article:nth-of-type(2)>div>img:hover{
+                width: 70%;
+            }
+        
+            
+            /*Modifications liées à l'explication du Déroulement de l'épreuve*/
+        
+             section>article:first-of-type>div{
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                
+                margin-top: 200px;
+            }
+             section>article:first-of-type>div>h2{
+                margin: 0;
+            }
+             section>article:first-of-type>div> hr{
+                color: #F50022 ;
+                background-color: #F50022;
+                width:54%;
+                height: 10px;
+                border: solid;
+            }
+        
+             section>article:first-of-type>div>p{
+                width: 700px;
+            }
+        
+             section>article:first-of-type+img{
+                width: 16%;
+                height: auto;
+                position: absolute;
+                right: 0;
+                top: 1700px;
+            }
+        
+            /*Modifications liées au podium*/
+        
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>h2{
+                margin: 0;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+            }
+        
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div{
+                border-radius: 10px;
+                width: 18vw;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 2vh 4vw 0;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>img{
+                width: 55px;
+                height: 55px;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>div{
+                font-size: 36px;
+                margin: 10px 0;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:first-of-type{
+                background-color: #FFE26E;
+            }
+        
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(2){
+                background-color: #A2D3FD;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(3){
+                background-color: #AD5655;
+            }
+        
+             section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>figure>img{
+                width: 90px;
+                height: 90px;
+            }
+        
+             section>div:nth-of-type(3)>div:first-of-type{
+                background-color: #141E61;
+                width: 80%;
+                height: 500px;
+                position: absolute;
+                z-index: -1;
+                left: 8%;
+                margin-top: 30px;
+                border-radius: 10px;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(2){
+                background-color: #fff;
+                width: 80%;
+                height: 500px;
+                position: absolute;
+                z-index: 0;
+                left: 10%;
+                margin-top: 60px;
+                border-radius: 25px;
+            }
+             section>div:nth-of-type(3)>div:nth-of-type(3){
+                background-color: #F50022;
+                width: 80%;
+                height: 500px;
+                position: absolute;
+                z-index: -2;
+                left: 12%;
+                margin-top: 90px;
+                border-radius: 10px;
+            }
+        
+            /*Modifications liées au tableau des résultats*/
+        
+             section>article:nth-of-type(2){
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                margin-top: 40em;
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+        
+             section>article:nth-of-type(2)>h2{
+                margin: 0;
+                width: 48%;
+                height: 15vh;
+                position: relative;
+                left: 26%;
+                margin-bottom: 4vh;
+            }
+        
+             section>article:nth-of-type(2)> hr{
+                background-color: #141E61;
+                width: 54%;
+                height: 9px;
+                position: relative;
+                left: 0;
+            }
+        
+             section>article:nth-of-type(2)>div>table{
+                width: 95%;
+                height: 90%;
+                margin: 30px;
+                margin-top: 3vh;
+            }
+        
+             section>article:nth-of-type(2)>div:first-of-type{
+                width: 80%;
+                height: 40vh;
+                position: relative;
+                background-color: #fff;
+                z-index: -1;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                border-radius: 10px;
+                left: 10%;
+            }
+        
+             section>article:nth-of-type(2)>div:nth-of-type(2){
+                background-color: #141E61;
+                width: 25%;
+                height: 15vh;
+                position: absolute;
+                left: 8%;
+                top: 80%;
+                z-index: -2;
+            }
+        
+             section>article:nth-of-type(2)>div:nth-of-type(3){
+                background-color: #141E61;
+                width: 25%;
+                height: 15vh;
+                position: absolute;
+                z-index: -2;
+                top: 80%;
+                right: 8%;
+            }
+        
+            /*Modifications liées au Moments Forts de l'épreuve*/
+        
+             section>article:nth-of-type(3){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #141E61;
+                width: 100%;
+                height: 60vh;
+                position: relative;
+                z-index: -2;
+                margin-top: 8em;
+            }
+        
+             section>article:nth-of-type(3)>h2{
+                color: #fff;
+                width: 31%;
+                height: 2vh;
+                position: absolute;
+                left: 32.5%;
+                top: -10px;
+            }
+        
+             section>article:nth-of-type(3)>div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+        
+             section>article:nth-of-type(3)>div>figure{
+                width: 33%;
+                height: 3vh;
+            }
+        
+             section>article:nth-of-type(3)>div>div{
+                background-color: #F50022;
+                width: 14%;
+                height: 18vh;
+            }
+        
+             section>article:nth-of-type(3)>div>div:first-of-type{
+                position: absolute;
+                left: 2%;
+                top: 6vh;
+                z-index: -1;
+            }
+             section>article:nth-of-type(3)>div>div:nth-of-type(2){
+                position: absolute;
+                left: 25%;
+                top: 36vh;
+                z-index: -1;
+            }
+             section>article:nth-of-type(3)>div>div:nth-of-type(3){
+                position: absolute;
+                right: 29%;
+                top: 36vh;
+                z-index: -1;
+            }
+             section>article:nth-of-type(3)>div>div:nth-of-type(4){
+                position: absolute;
+                left: 80% ;
+                top: 6vh;
+                z-index: -1;
+            }
+        
+             section>article:nth-of-type(3)>div>img{
+                width: 20%;
+                height: auto;
+                position: absolute;
+                left: 38.5%;
+                top: 20vh;
+                z-index: -1;
+            }
+        
+             section>article:nth-of-type(3)>div>figure>img{
+                width:33% ;
+                height:40vh ;
+                position: absolute;
+                left: 4%;
+                top: 10vh;
+            }
+        
+             section>article:nth-of-type(3)>div>video{
+                width: 33%;
+                height: 40vh;
+                position: absolute;
+                right: 8%;
+                top: 10vh;
+            }
+        
+            /*Modifications liées aux Récapitulatif des records*/
+        
+             section>article:nth-of-type(4){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                margin-top: 20px;
+                width: 100%;
+            }
+        
+             section>article:nth-of-type(4)>h2{
+                width: 90%;
+                margin: 0;
+            }
+        
+             section>article:nth-of-type(4)>div>table{
+                width: 90%;
+                height: 90%;
+                margin-top: 6v;
+                margin-left:  5vh;
+            }
+        
+             section>article:nth-of-type(4)>div:first-of-type{
+                background-color: #fff;
+                width: 62.5%;
+                height: 45vh;
+                position: relative;
+                z-index: -1;
+                left: 0%;
+                top: 0%;
+                border-radius: 25px;
+                margin-top: 18vh;
+            }
+        
+             section>article:nth-of-type(4)>div:nth-of-type(2){
+                background-color: #F50022;
+                width: 62.5%;
+                height: 45vh;
+                position: absolute;
+                border-radius: 10px;
+                left: 21%;
+                top: 25%;
+                z-index: -2 ;
+                margin-top: 20vh;
+            }
+        
+             section>article:nth-of-type(4)>img{
+                width: 17%;
+                height: auto;
+                position: absolute;
+                left: 0;
+                top: 40%;
+            }
+        
+            /*Modifications liées au footer*/
+        
+            footer{
+                position: relative;
+            }
+        }
+        
+        .profil{ /*Css de la page de profil*/
+        
+        }
+                footer {
             background-color: #141E61;
             border-radius: 25px 25px 0 0;
             display: flex;
@@ -124,1020 +1159,4 @@
         footer > div:nth-of-type(3) > div > p {
             margin-left: auto;
         }
-    }
-}
-
-.acceuil{ /*Css de la page d'acceuil*/
-
-}
-
-.discipline{ /*Css de la page de Discipline*/
-    
-}
-
-.epreuve{ /*Css de la page d'épreuve*/
-            /*polices et taille de police pour pc*/
-
-
-    @font-face {
-        font-family: Amoresa;
-        src: url(polices/Amoresa.ttf);
-    }
-
-    @font-face {
-        font-family: Cinzel;
-        src: url(polices/Cinzel-Regular.ttf);
-    }
-
-/*=============================================================================================================================================== 
-=                                                           CSS POUR PETIT ECRAN                                                                =
-=================================================================================================================================================*/
-
-
-@media screen and (max-width: 428px) {
-
-    body{
-        font-family: 'Montserrat';
-        font-size: 10px;
-        color: #000;
-        text-align: center;
-    }
-
-    h1{
-        font-size: 48px;
-        font-family: "Cinzel";
-    }
-
-    
-    h2{
-        font-size: 16px;
-        font-family: "Cinzel";
-    }
-
-    h3{
-        font-size: 13px;
-        font-weight: bold;
-    }
-
-    table{
-        border-collapse: collapse;
-        
-    }
-
-    thead{
-        background-color: #FFE26E;
-    }
-    tbody{
-        background-color: #fff;
-    }
-    th,td{
-        border: 1px solid #000;
-    }
-
-    .Epreuve>section>div:first-of-type{
-        background-image: url("images/epreuve/image_titre.webp");
-        background-size: cover;
-        color: #fff;
-        position: relative;
-    }
-    h1:first-of-type::first-letter{
-        font-family: "Amoresa"; src:"polices/Amoresa.ttf";
-    }
-    .Epreuve>section>div:first-of-type>h1:nth-of-type(2){
-        font-size: 32px;
-    }
-
-    .Epreuve>section>div:nth-of-type(2){
-        width: 100%;
-        position: relative;
-        top: -2.7em;
-    }
-    .Epreuve>section>div:nth-of-type(2)>img{
-        width: 95%;
-        height: auto;
-        position: relative;
-        top:28em;
-        z-index: 0;
-    }
-    .Epreuve>section>div:nth-of-type(2)>img:nth-of-type(2){
-        display: none;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div{
-        background-color: #141E61;
-        width: 54%;
-        height: 25%;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:first-of-type{
-        width: 66%;
-        position: absolute;
-        z-index: -1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(2){
-        background-color: #fff;
-        width: 40%;
-        height: 52%;
-        position: absolute;
-        left: 62% ;
-        border-radius: 25px;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(2)>img{
-        width: 80%;
-        height: auto;
-        position: relative;
-        top: 15%;
-        z-index: 1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(3){
-        position: absolute;
-        top: 47%;
-        left:48.2%;
-        z-index: -1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(4){
-        position: absolute;
-        top: 58%;
-        left: 48.2%;
-        z-index: -1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(5){
-        position: absolute;
-        left: 0;
-        top:125%;
-        z-index: -2;
-
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:first-of-type{
-        width: 95%;
-        height: 68%;
-        position: absolute;
-        top: 20px;
-        background-color: #fff;
-        border-radius: 25px;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:first-of-type>h2{
-        width: 39%;
-        position: relative;
-        left: 17%;
-        top: 10%;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:first-of-type>p{
-        width: 70%;
-        position: relative;
-        left: 2%;
-        top: 25%;
-    }
-
-
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2){
-        width: 98%;
-        height: 68%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        left:20px;
-        top: 78%;
-        border-radius: 25px;
-        background-color: #fff;
-        z-index: -1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>h2{
-        width: 58%;
-        position: relative;
-        left: 27%;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>div{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        position: relative;
-    }
-
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>div>img{
-        width: 90%;
-        height: auto;
-        position: relative;
-        left: 2%;
-        top: 15%;
-        margin: 1em;
-    }
-
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>div>p{
-        width: 110%;
-    }
-
-    .Epreuve>section>article:first-of-type>div{
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: 28em;
-    }
-    .Epreuve>section>article:first-of-type>div>h2{
-        margin: 0;
-    }
-    .Epreuve>section>article:first-of-type>div> hr{
-        color: #F50022 ;
-        background-color: #F50022;
-        width:77%;
-        height: 2px;
-        border: solid;
-    }
-
-    .Epreuve>section>article:first-of-type>div>p{
-        width: 68%;
-    }
-
-    .Epreuve>section>article:first-of-type+img{
-        display: none;
-    }
-
-
-    .Epreuve>section>div:nth-of-type(3){
-        position: absolute;
-        top: 140em;
-        width: 100%;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>h2{
-        margin: 0;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div{
-        border-radius: 10px;
-        width: 26%;
-        height: 15em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 15px 15px 0;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>img{
-        width: 18%;
-        height: auto;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>div{
-        font-size: 13px;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:first-of-type{
-        background-color: #FFE26E;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(2){
-        background-color: #A2D3FD;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(3){
-        background-color: #AD5655;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>figure{
-        width: 25%;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>figure>img{
-        width: 100%;
-        height: auto;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:first-of-type{
-        background-color: #141E61;
-        width: 90%;
-        height: 20em;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        border-radius: 10px;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2){
-        background-color: #fff;
-        width: 90%;
-        height: 20em;
-        position: absolute;
-        left: 1em;
-        top: 1em;
-        z-index: 0;
-        border-radius: 10px;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(3){
-        background-color: #F50022;
-        width: 90%;
-        height: 20em;
-        position: absolute;
-        left: 2em;
-        top: 2em;
-        z-index: -2;
-        border-radius: 10px;
-    }
-
-
-    .Epreuve>section>article:nth-of-type(2){
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        position: relative;
-
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>h2{
-        margin: 0;
-        width: 54%;
-        height: 44px;
-        position: relative;
-        left: 22%;
-        top: 35em;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)> hr{
-        background-color: #141E61;
-        color: #141E61;
-        width: 59%;
-        height: 4px;
-        position: relative;
-        top: 55.5em;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>div>table{
-        margin: 30px;
-    } 
-
-    .Epreuve>section>article:nth-of-type(2)>div:first-of-type{
-        width: 86%;
-        height: 230px;
-        position: relative;
-        left: 7%;
-        top: 55em;
-        background-color: #fff;
-        z-index: -1;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border-radius: 10px;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>div:nth-of-type(2){
-        background-color: #141E61;
-        width: 27%;
-        height: 100px;
-        position: absolute;
-        left: 2%;
-        top: 75em;
-        z-index: -2;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>div:nth-of-type(3){
-        background-color: #141E61;
-        width: 27%;
-        height: 100px;
-        position: absolute;
-        left: 71%;
-        top: 75em;
-        z-index: -2;
-    }
-
-    .Epreuve>section>article:nth-of-type(3){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #141E61;
-        width: 100%;
-        height: 38em;
-        position: relative;
-        top: 60em;
-        z-index: -2;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>h2{
-        color: #fff;
-        width: 39%;
-        position: absolute;
-        left: 57%;
-        top: 10%;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>figure{
-        width: 200px;
-        height: 140px;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>div{
-        background-color: #F50022;
-        width: 24%;
-        height: 18%;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>div:first-of-type{
-        position: absolute;
-        left: 0;
-        top: 5%;
-        z-index: -1;
-    }
-    .Epreuve>section>article:nth-of-type(3)>div>div:nth-of-type(2){
-        position: absolute;
-        left: 34%;
-        top: 32%;
-        z-index: -1;
-    }
-    .Epreuve>section>article:nth-of-type(3)>div>div:nth-of-type(3){
-        position: absolute;
-        left: 45%;
-        bottom: 7%;
-        z-index: -1;
-    }
-    .Epreuve>section>article:nth-of-type(3)>div>div:nth-of-type(4){
-        position: absolute;
-        right: 0px;
-        top: 48%;
-        z-index: -1;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>img{
-        width: 44%;
-        height: auto;
-        position: absolute;
-        left: 0px;
-        top: 50%;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>figure>img{
-        width:47% ;
-        height:36% ;
-        position: absolute;
-        left: 10px;
-        top: 30px;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>video{
-        width: 47%;
-        height: 36%;
-        position: absolute;
-        left: 50%;
-        top: 200px;
-    }
-
-
-
-    .Epreuve>section>article:nth-of-type(4){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        position: relative;
-        top: 80em
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>h2{
-        width: 88%;
-        margin: 0;
-        position: relative;
-        top: -10em;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>div>table{
-        width: 93%;
-        height: 90%;
-        margin: 4vh;
-        margin-top: 6vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>div:first-of-type{
-        background-color: #fff;
-        width: 88%;
-        position: relative;
-        top: -15em;
-        z-index: -1;
-        border-radius: 10px;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>div:nth-of-type(2){
-        background-color: #F50022;
-        width: 88%;
-        height: 80%;
-        position: absolute;
-        left: 10%;
-        top:-9em;
-        border-radius: 10px;
-        z-index: -2 ;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>img{
-        display: none;
-    }
-
-    .Epreuve+footer{
-        position: relative;
-        top: 70em;
-        border: 1px solid;
-    }
-
-}
-
-/*=============================================================================================================================================== 
-=                                                           CSS POUR ECRAN LARGE                                                                =
-=================================================================================================================================================*/
-
-
-
-
-@media screen and (min-width: 429px) {
-    
-    body{
-        font-family: 'Montserrat';
-        font-size: 16px;
-        color: #000;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between  ;
-        align-items: center;    
-    }
-
-    h1{
-        font-size: 128px;
-        font-family: "Cinzel";
-    }
-
-    
-    h2{
-        font-size: 48px;
-        font-family: "Cinzel";
-    }
-
-    h3{
-        font-size: 36px;
-        font-weight: bold;
-    }
-
-    table{
-        border-collapse: collapse;
-        
-    }
-
-    thead{
-        background-color: #FFE26E;
-    }
-    tbody{
-        background-color: #fff;
-    }
-    th,td{
-        border: 1px solid #000;
-    }
-
-    .Epreuve>section>div:first-of-type{
-        background-image: url("images/epreuve/image_titre.webp");
-        background-size: cover;
-        color: #fff;
-        height: 895px;
-        width: 100%;
-    }
-    h1:first-of-type::first-letter{
-        font-family: "Amoresa"; src:"polices/Amoresa.ttf";
-    }
-    .Epreuve>section>div:first-of-type>h1:nth-of-type(2){
-        font-size: 110px;
-        position: relative;;
-        bottom: 0;
-    }
-
-    .Epreuve>section>div:nth-of-type(2){
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        position: relative;
-    }
-    .Epreuve>section>div:nth-of-type(2)>img:first-of-type{
-        display: none;
-    }
-    .Epreuve>section>div:nth-of-type(2)>img{
-        width: 30%;
-        height: 100%;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div{
-        background-color: #141E61;
-        width: 25%;
-        height: 45%;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:first-of-type{
-        position: absolute;
-        top: 0;
-        left:0;
-        z-index: -1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(2){
-        display: none;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(3){
-        position: absolute;
-        top:70%;
-        left: 15%;
-        z-index: -1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(4){
-        position: absolute;
-        left: 60%;
-        top: 70%;
-        z-index: -1;
-    }
-    .Epreuve>section>div:nth-of-type(2)>div:nth-of-type(5){
-        position: absolute;
-        right: 0;
-        top:0;
-        z-index: -1;
-
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:first-of-type{
-        width: 44%;
-        height: auto;
-        position: relative;
-        left:0;
-        top: 30px;
-        background-color: #fff;
-        border-radius: 25px;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:first-of-type>p{
-        width: 90%;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2){
-        width: 44%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        left: 0;
-        top: 30px;
-        border-radius: 25px;
-        background-color: #fff;
-    }
-
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>div{
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: flex-start;
-        width: 100%;
-        height: 56%;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>div>p{
-        width: 59%;
-        height: 75%;
-    }
-
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>div>img{
-        width: 41%;
-        height: auto;
-        margin: 1em;
-    }
-    .Epreuve>section>div:nth-of-type(2)>article:nth-of-type(2)>div>img:hover{
-        width: 70%;
-    }
-
-    .Epreuve>section>article:first-of-type>div{
-        display: flex;
-        flex-wrap: nowrap;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        
-        margin-top: 200px;
-    }
-    .Epreuve>section>article:first-of-type>div>h2{
-        margin: 0;
-    }
-    .Epreuve>section>article:first-of-type>div> hr{
-        color: #F50022 ;
-        background-color: #F50022;
-        width:54%;
-        height: 10px;
-        border: solid;
-    }
-
-    .Epreuve>section>article:first-of-type>div>p{
-        width: 700px;
-    }
-
-    .Epreuve>section>article:first-of-type+img{
-        width: 16%;
-        height: auto;
-        position: absolute;
-        right: 0;
-        top: 1700px;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>h2{
-        margin: 0;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div{
-        border-radius: 10px;
-        width: 18vw;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 2vh 4vw 0;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>img{
-        width: 55px;
-        height: 55px;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>div{
-        font-size: 36px;
-        margin: 10px 0;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:first-of-type{
-        background-color: #FFE26E;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(2){
-        background-color: #A2D3FD;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div:nth-of-type(3){
-        background-color: #AD5655;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2)>article>div>div>figure>img{
-        width: 90px;
-        height: 90px;
-    }
-
-    .Epreuve>section>div:nth-of-type(3)>div:first-of-type{
-        background-color: #141E61;
-        width: 80%;
-        height: 500px;
-        position: absolute;
-        z-index: -1;
-        left: 8%;
-        margin-top: 30px;
-        border-radius: 10px;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(2){
-        background-color: #fff;
-        width: 80%;
-        height: 500px;
-        position: absolute;
-        z-index: 0;
-        left: 10%;
-        margin-top: 60px;
-        border-radius: 25px;
-    }
-    .Epreuve>section>div:nth-of-type(3)>div:nth-of-type(3){
-        background-color: #F50022;
-        width: 80%;
-        height: 500px;
-        position: absolute;
-        z-index: -2;
-        left: 12%;
-        margin-top: 90px;
-        border-radius: 10px;
-    }
-
-
-    .Epreuve>section>article:nth-of-type(2){
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        margin-top: 40em;
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>h2{
-        margin: 0;
-        width: 48%;
-        height: 15vh;
-        position: relative;
-        left: 26%;
-        margin-bottom: 4vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)> hr{
-        background-color: #141E61;
-        width: 54%;
-        height: 9px;
-        position: relative;
-        left: 0;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>div>table{
-        width: 95%;
-        height: 90%;
-        margin: 30px;
-        margin-top: 3vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>div:first-of-type{
-        width: 80%;
-        height: 40vh;
-        position: relative;
-        background-color: #fff;
-        z-index: -1;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        border-radius: 10px;
-        left: 10%;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>div:nth-of-type(2){
-        background-color: #141E61;
-        width: 25%;
-        height: 15vh;
-        position: absolute;
-        left: 8%;
-        top: 80%;
-        z-index: -2;
-    }
-
-    .Epreuve>section>article:nth-of-type(2)>div:nth-of-type(3){
-        background-color: #141E61;
-        width: 25%;
-        height: 15vh;
-        position: absolute;
-        z-index: -2;
-        top: 80%;
-        right: 8%;
-    }
-
-    .Epreuve>section>article:nth-of-type(3){
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #141E61;
-        width: 100%;
-        height: 60vh;
-        position: relative;
-        z-index: -2;
-        margin-top: 8em;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>h2{
-        color: #fff;
-        width: 31%;
-        height: 2vh;
-        position: absolute;
-        left: 32.5%;
-        top: -10px;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>figure{
-        width: 33%;
-        height: 3vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>div{
-        background-color: #F50022;
-        width: 14%;
-        height: 18vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>div:first-of-type{
-        position: absolute;
-        left: 2%;
-        top: 6vh;
-        z-index: -1;
-    }
-    .Epreuve>section>article:nth-of-type(3)>div>div:nth-of-type(2){
-        position: absolute;
-        left: 25%;
-        top: 36vh;
-        z-index: -1;
-    }
-    .Epreuve>section>article:nth-of-type(3)>div>div:nth-of-type(3){
-        position: absolute;
-        right: 29%;
-        top: 36vh;
-        z-index: -1;
-    }
-    .Epreuve>section>article:nth-of-type(3)>div>div:nth-of-type(4){
-        position: absolute;
-        left: 80% ;
-        top: 6vh;
-        z-index: -1;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>img{
-        width: 20%;
-        height: auto;
-        position: absolute;
-        left: 38.5%;
-        top: 20vh;
-        z-index: -1;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>figure>img{
-        width:33% ;
-        height:40vh ;
-        position: absolute;
-        left: 4%;
-        top: 10vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(3)>div>video{
-        width: 33%;
-        height: 40vh;
-        position: absolute;
-        right: 8%;
-        top: 10vh;
-    }
-
-
-
-    .Epreuve>section>article:nth-of-type(4){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>h2{
-        width: 90%;
-        margin: 0;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>div>table{
-        width: 90%;
-        height: 90%;
-        margin-top: 6v;
-        margin-left:  5vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>div:first-of-type{
-        background-color: #fff;
-        width: 62.5%;
-        height: 45vh;
-        position: relative;
-        z-index: -1;
-        left: 0%;
-        top: 0%;
-        border-radius: 25px;
-        margin-top: 18vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>div:nth-of-type(2){
-        background-color: #F50022;
-        width: 62.5%;
-        height: 45vh;
-        position: absolute;
-        border-radius: 10px;
-        left: 21%;
-        top: 25%;
-        z-index: -2 ;
-        margin-top: 20vh;
-    }
-
-    .Epreuve>section>article:nth-of-type(4)>img{
-        width: 17%;
-        height: auto;
-        position: absolute;
-        left: 0;
-        top: 40%;
-    }
-
-    .Epreuve+footer{
-        position: relative;
-    }
-}
-}
-
-.profil{ /*Css de la page de profil*/
-
 }
