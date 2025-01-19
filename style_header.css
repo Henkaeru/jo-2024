@@ -1,48 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-header {
-    background-color: #141E61;
-    padding: 0 1rem 0.5rem 0.5rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 0 0 25px 25px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: left;
+@media screen and (max-width: 428px) {
+    header {
+    }
 }
 
-header img {
-    height: 5em;
-    padding: 0.3em;
-    margin-right: 22%;
+@media screen and (min-width: 429px) {
+    header {
+        background-color: #141E61;
+        padding: 0 1rem 0.5rem 0.5rem;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0 0 25px 25px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
 
-}
+    header img {
+        height: 5em;
+        padding: 0.3em;
+        margin-right: 22%;
 
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 18%;
-}
+    }
 
-header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 2em;
-    transition: color 0.3s;
-}
+    header nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 18%;
+    }
 
-header nav ul li a:hover {
-    color: #FFE26E;
-}
+    header nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 2em;
+        transition: color 0.3s;
+    }
 
-header + * {
-    margin-top: 5%;
+    header nav ul li a:hover {
+        color: #FFE26E;
+    }
+
+    header + * {
+        margin-top: 5%;
+    }
 }
