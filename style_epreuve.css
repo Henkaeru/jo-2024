@@ -57,7 +57,7 @@
     }
 
     .Titre{
-        background-image: url("images/image_titre.png");
+        background-image: url("images/epreuve/image_titre.png");
         background-size: cover;
         color: #fff;
         position: relative;
@@ -612,7 +612,7 @@
     }
 
     .Titre{
-        background-image: url("images/image_titre.png");
+        background-image: url("images/epreuve/image_titre.png");
         background-size: cover;
         color: #fff;
         height: 895px;
@@ -713,7 +713,9 @@
         height: auto;
         margin: 1em;
     }
-    
+    .site>div>img:hover{
+        width: 70%;
+    }
 
     .Deroulement>div{
         display: flex;
