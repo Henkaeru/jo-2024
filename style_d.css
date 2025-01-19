@@ -1,6 +1,15 @@
+/*CSS valable sur toute la feuille*/
+/*images partie 1, rajouetr forme couleurs
+bordure rouge
+ajouetr les photos et mettre texte dans bordure*/
+
+main{
+    margin: 0px;
+    padding: 0px;
+}
+
 h1 {
     margin: 0px;
-    margin-left:-10px;
     width: 100%;
     height: 1100px;
     background-image: url(images/discipline/image_titre.png);
@@ -9,7 +18,8 @@ h1 {
 
 h2{
     font-size: 48px;
-    font-family: Cinzel; src:"polices/Cinzel-Regular.otf"
+    font-family: Cinzel; src:"polices/Cinzel-Regular.otf";
+    text-transform: uppercase;
 }
 
 h3{
@@ -17,107 +27,481 @@ h3{
     font-style: bold;
 }
 
+p{
+    font-size: 16px;
+}
+
+li{
+    font-size: 16px;
+    list-style-type:none;
+}
+
+
 main{
     width: 100%;
-    background-color: blanchedalmond;
 }
 
 article{
     display: flex;
 }
 
-div{
-    margin:20px;
-    padding:40px;
-    width: 60%;
+section{
+    margin-bottom: 8%;
+}
+
+.surligner{
+    font-size: 25px;
+    color: #f50022;
+}
+
+section:first-of-type{
+    margin-bottom: 0%;
+}
+
+/*CSS valable sur la peemière partie : Histoire*/
+
+section:nth-of-type(2) > article > div{
+    position: relative;
+    padding:20px;
     background-color: white;
-    z-index: 2;
+    z-index: 1;
+    margin-bottom: 5%;
+}
+
+section:nth-of-type(2) > article > div > p{
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+    width: 60%;
 }
 
 section:nth-of-type(2) > article:first-of-type > img {
+    display: flex;
     flex-shrink: 0;
 }
 
-section:nth-of-type(2) > article:first-of-type > img:first-child{
+section:nth-of-type(2) > article:first-of-type{
+    position: relative;
+}
+
+section:nth-of-type(2) > article:first-of-type > div > img:first-of-type{
+    position:absolute;
+    left: 65%;
+    bottom: 0%;
+    z-index: 2;
+}
+
+section:nth-of-type(2) > article:first-of-type > div > img:nth-of-type(2){
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 30%;
+    height: 100%;
     z-index: 1;
 }
 
-section:nth-of-type(2) > article:first-of-type > img:nth-of-type(2){
+section:nth-of-type(2) > article > div > div {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 55%;
+    height: 10%;
+    background-color: #f50022;
+
+}
+
+section:nth-of-type(2) > article:nth-of-type(2){
+    position: relative;
+    margin-bottom: 6%;
+}
+
+section:nth-of-type(2) > article:nth-of-type(2) > div:first-of-type{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    height: 50%;
+    width: 30%;
+    background-color: #B0125E;
+    display: flex;
+    z-index: 1;
+}
+
+section:nth-of-type(2) > article:nth-of-type(2) > div:nth-of-type(2){
+    position: absolute;
+    width: 65%;
+    left:29%;
+    top:20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+section:nth-of-type(2) > article:nth-of-type(3){
+    position: relative;
+}
+
+section:nth-of-type(2) > article:nth-of-type(3) > div {
+    position: relative;
+    margin-left: 3%;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+}
+
+section:nth-of-type(2) > article:nth-of-type(3) > div > ul{
+    width: 55%;
+}
+
+section:nth-of-type(2) > article:nth-of-type(3) > div > img {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    width: 40%;
+    height: 100%;
+}
+
+section:nth-of-type(2) > article:nth-of-type(3) > div:last-of-type{
+    position: absolute;
+    bottom: -5%;
+    left: -2%;
+    display: flex;
+    z-index: 1;
+    background-color: #AD5655;
+    height: 30%;
+    width: 45%;
+}
+
+
+/*CSS valable sur la deuxième partie : Règles*/
+/*arrondir les coins*/
+section:nth-of-type(3){
+    position: relative;
+    display:flex;
+    background-color: #141E61;
+
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+section:nth-of-type(3) > div:first-child {
+    position: relative;
+    z-index: 2;
+    margin: 4%;
+    padding: 3%;
+    border-radius:25px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    background-color: white;
+    width: 70%;
+    height: 80%;
+}
+
+section:nth-of-type(3) > div > p{
+    width: 95%;
+}
+
+section:nth-of-type(3) > img{
+    position: absolute;
+    right: 4%;
+    bottom: 2%;
+    align-self: flex-end;
     z-index: 3;
 }
 
-section:nth-of-type(3){
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    background-color: white;
-    margin-left:200px;
-    margin-right: 200px;
-    margin-top: 10px;
+section:nth-of-type(3) > div:not(div:first-child){
+    display: flex;
+    align-self: flex-start;
+    width: 250px;
+    height: 250px;
+    background-color: #f50022;
 }
+
+section:nth-of-type(3) > div:nth-of-type(2){
+    position: absolute;
+    top:6%;
+    left:11%;
+    z-index: 1;
+}
+
+section:nth-of-type(3) > div:nth-of-type(3){
+    position: absolute;
+    top:6%;
+    right:11%;
+    z-index: 1;
+}
+
+section:nth-of-type(3) > div:nth-of-type(4){
+    position: absolute;
+    bottom:6%;
+    left:11%;
+    z-index: 1;
+}
+
+section:nth-of-type(3) > div:nth-of-type(5){
+    position: absolute;
+    bottom:6%;
+    right:11%;
+    z-index: 1;
+}
+
+
+
+/*CSS valable sur la troisième partie : Techniques*/
 
 section:nth-of-type(4){
     display: flex;
     flex-direction: row;
+    background-color: #4F7FC2;
 }
 
 section:nth-of-type(4)> img {
     align-self: flex-end;
     margin-left:0px;
     margin-right: 0px;
+    width: 30%;
+    height: 100%;
 }
 
 section:nth-of-type(4)> div:nth-of-type(1){ 
-    margin-right: 0px;
-    margin-left:0px;
+    width: 50%;
+    padding:5%;
     background-color: #141E61;
     color: #A2D3FD;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 section:nth-of-type(4)> div:nth-of-type(2){ 
-    width: 30px;
+    width: 10%;
     background-color: #4F7FC2;
     margin-left:0px;
     margin-right: 0px;
+
 }
 section:nth-of-type(4)> div:nth-of-type(3){ 
-    width: 30px;
+    width: 10%;
     background-color: #A2D3FD;
     margin-left:0px;
     margin-right: 0px;
 }
 
-section:nth-of-type(5) ~ article{ 
-    display: flex;
+
+
+/*CSS valable sur la quatrième partie : Epreuves*/
+/*ajouter les carré rouge autour, centrer le texte*/
+
+section:nth-of-type(5){
+    margin-bottom: 100px;
+    margin-bottom: 15%;
+}
+
+section:nth-of-type(5) > div:first-of-type{
+    position: absolute;
+    left:5%;
+    border-style: solid;
+    border-color: #f50022;
+    border-width: 1px;
+    width: 90%;
+    height: 175%;
+    margin-top: 2%;
 }
 
 section:nth-of-type(5) > h2 {
+    position: relative;
     display: flex;
-    align-self:flex-end;
-    margin-right: 20px;
+    justify-self: flex-end;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 7%;
 }
 
-section:nth-of-type(5) > h3{
+section:nth-of-type(5) > div > article > h3{
     color: white;
+    padding-left: 40px;
 }
 
-section:nth-of-type(5) > article {
-    display: inline-block;
-    width: 40%;
-    background-color: #141E61;
-}
-
-section:nth-of-type(5) > article:first-of-type{
+section:nth-of-type(5) > div > article:first-of-type > h3{
     text-align:right;
 }
 
-
-section:nth-of-type(5) > article:last-of-type{ 
-    align-self: flex-end;
-    text-align:left;
+section:nth-of-type(5) > div > article {
+    position: relative;
+    display: inline-block;
+    width: 42%;
+    background-color: #141E61;
+    padding-left: 5px;
+    padding-right: 40px;
+    padding-bottom: 20px;
 }
 
-section:nth-of-type(5) > ul ~ li { 
+section:nth-of-type(5) > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+section:nth-of-type(5) > div > article > ul > li { 
+    display: block;
+    padding-left: 2%;
+    padding-top: 3%;
+    height: 40px;
+    margin-bottom: 15px;
     background-color: #A2D3FD;
+}
+
+section:nth-of-type(5) > div > article > ul > li:hover{
+    background-color: white;
+}
+
+a{
+    color: #141E61;
+    text-decoration: none;
+}
+
+
+
+/*CSS valable sur la cinquième partie : Profils*/
+/*mettre les deux barres en bas, et les photos des gens*/
+
+section:nth-of-type(6){
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0%;
+}
+
+section:nth-of-type(6) > div{
+    padding-left: 12px;
+    padding-right: 35px;
+    width: 8%;
+    flex-shrink: 0;
+}
+
+section:nth-of-type(6) > div > img {
+    position: absolute;
+    z-index: 1;
+    bottom:0px;
+}
+
+section:nth-of-type(6) > div > a >p {
+    position: relative;
+    z-index: 2;
+    align-items: column;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+main > div {
+    width: 100%;
+}
+
+main > div:first-of-type {
+    position: relative;
+    height: 91px;
+    background-color: #FFE26E;
+    z-index: 1;
+}
+
+main > div:nth-of-type(2) {
+    position: relative;
+    top: -75px;
+    height: 59px;
+    background-color: #AD5655;
+    z-index: 2;
+}
+
+
+
+/*CSS valable sur la cinquième partie : Tableau*/
+
+section:nth-of-type(7){
+    position: relative;
+}
+
+section:nth-of-type(7) > div{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+section:nth-of-type(7) > img:first-of-type {
+    position: absolute;
+    left:-85px;
+    top:-200px;
+    z-index: 3;
+}
+
+table {
+    width: 65%;
+    margin-right: 5%;
+}
+
+tr{
+    height: 60px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-bottom: 15px;
+}
+
+table > caption{
+    position: relative;
+    z-index: 2;
+    align-items: center;
+    background-color: #B0125E;
+    color: white;
+    height: 82px;
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-style: bold;
+}
+
+table > thead > tr > td {
+    text-align: center;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-bottom: 3%;
+}
+
+table > thead > tr > td:nth-of-type(3) {
+    background-color: #FFE26E;
+    color: #FFE26E;
+    border-color: #FFE26E;
+}
+
+table > thead > tr > td:nth-of-type(4) {
+    background-color: #A2D3FD;
+    color: #A2D3FD;
+    border-color: #A2D3FD;
+}
+
+table > thead > tr > td:nth-of-type(5) {
+    background-color: #AD5655;
+    color: #AD5655;
+    border-color: #AD5655;
+}
+
+table > tbody > tr{
+    background-color: white;
+}
+
+table > tbody > tr > td{
+    text-align: center;
+    border-style: solid;
+    border-color: #4F7FC2;
+    border-width: 1px;
+    border-radius: 25px;
+}
+
+section:nth-of-type(7) > img:last-of-type {
+    height: 729px;
+    width: 1943px;
+    position: absolute;
+    top:54%;
+    left: -50%;
+    z-index: -1;
 }
