@@ -124,6 +124,10 @@
         margin-top: 150px;
     }
 
+    main > img {
+        display: none;
+    }
+
     .coucou1 > figure { /*images de le france et natation*/
         display: flex;
         flex-direction: column; /*permet d'influer sur la direction des éléments, ils sont tous en colonne*/
@@ -358,11 +362,12 @@
 
     section > article > table {
         position: relative;
-        left: 10%;
+        left: 5%;
         margin-top: 5%;
         width: 900px;
         height: 100px;
         border-collapse: collapse;
+        border: 5px solid black;
     }
 
     .article1 > img {
@@ -383,6 +388,7 @@
         width: 3em;
         font-size: 38px;
         text-align: center;
+        border: 1px solid black;
     }
 
     .article1 > table > thead > tr > th + th + th + th {
@@ -562,39 +568,39 @@
 
     .coucou1 > img { /*image des médailles*/
         position: absolute;
-        top: 100%;
-        bottom: -130px;
-        left: 20%;
-        width: 400px;
-        height: 100px;
+        top: -150px;
+        width: 90%;
+        height: 70px;
+        left: 5%;
         transition: all 0.2s linear; 
     }
 
     .coucou1 > img:hover {
-        transform: scale(1.5) translateY(10px) ;
+        transform: scale(1.2) translateY(10px) ;
     }
 
     .drapeau_france{ /*image du drapeau francais circulaire*/
         width: 125px;
         height: 125px;
         position: relative;
-        left: 15%;
-        top: 280px;
+        left: -50px;
+        top: -110px;
     }
 
     section > figure > img:last-child { /*image du logo de natation*/
         width: 180px;
         height: 135px;
         position: relative;
-        top: 110px;
-        left: 40%;
+        left: 80px;
+        top: -280px;
     }
 
     section > nav > img { /*groupe des images de insta, facebook et hashtag*/
         width: 50px;
         height: 50px;
         position: relative;
-        left: 20%;
+        left: 15px;
+        top: -350px;
     }
 
     /**********************************************************************/
@@ -604,14 +610,15 @@
     .coucou1{ /*image de léon marchand*/
         position: relative; /*permet de ne pas influer sur le positionnement des autres éléments*/
         background-color: #141E61;
-        height: auto;
+        height: 500px;
         width: 100%;
-        background-image: url(images/profil/Léon_marchand.png); /*image de léon marchand*/
-        background-repeat: no-repeat;
-        background-size: 100% 70%;       /*width puis height*/
-        background-position: top; /*permet de */
         margin-bottom: 10%;
         margin-top: 150px;
+    }
+
+    main > img {
+        position: relative;
+        margin-top: 100px;
     }
 
     .coucou1 > figure { /*images de le france et natation*/
@@ -641,13 +648,13 @@
 
     .coucou1 > h1 { /*titre leon marchand*/
         position: relative;
-        bottom: 10px;
+        bottom: 50px;
         color: white;
         font-size: 128px;
         font-family: 'Courier New', Courier, monospace;
         font-weight: bolder;
         padding: 3px;
-        left: 10%;
+        left: 1%;
     }
 
     .coucou1 > h1::first-letter { /*premiere lettre du titre*/
@@ -687,7 +694,7 @@
         padding: 50px;
         margin-bottom: 60px;
         left: 1%;
-        top: 25px;
+        top: 30px;
     }
 
     .coucou2 > article > h3 { /*sous-titre de la deuxième partie*/
@@ -855,15 +862,15 @@
         margin-top: 20%;
         height: 500px;
         width: 300px;
-        margin-left: 13%;
-        border-width: 5px;
-        border-color: black;
+        margin-left: 5%;
         border-collapse: collapse;
+        border: 5px solid black;
     }
 
     td {
         text-align: center;
         border-width: 3px;
+        border: 1px solid black;
     }
 
     .table2 tr:first-of-type td:first-of-type{
@@ -951,11 +958,10 @@
         z-index: -1;
         height: 80%;
         top: 50%;
-        left: -100%;
+        left: -350%;
     }
 
     .coucou5 > article > img {
-        width: 0;
-        height: 0;
+        display: none;
     }
 } 
