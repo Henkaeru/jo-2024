@@ -3743,6 +3743,7 @@
     
         section > article > h2 { /*sous-titre de la troisième partie*/
             position: relative;
+            top: 0px;
             left: 4%;
             font-size: 128px;
             font-family: 'Cinzel', serif;
@@ -3751,6 +3752,7 @@
         section > article > h2 + h3 {
             position: relative;
             left: 2%;
+            top: 0px;
             font-size: 100px;
         }
     
@@ -3821,7 +3823,7 @@
             width: 10%;
             height: 1150px;
             right: 5%;
-            top: 3800px;
+            top: 6000px;
         }
     
         th {
@@ -3939,9 +3941,9 @@
             position: absolute;
             z-index: -1;
             height: auto;
-            width: 250%;
+            width: 150%;
             right: -35em;
-            bottom: 125em;
+            bottom: 100em;
         }
     }
 }
