@@ -1612,7 +1612,7 @@
         .section1{ /*image de léon marchand*/
             position: relative; /*permet de ne pas influer sur le positionnement des autres éléments*/
             background-color: #141E61;
-            height: 400px;
+            height: 450px;
             width: 100%;
             margin-bottom: 10%;
             margin-top: 150px;
@@ -1972,6 +1972,11 @@
     
         .section5 > article > p + h3 + p {
             font-size: 10px;
+        }
+
+        .section5 > article > img {
+            width: 100px;
+            height: 100px;
         }
     
         .section5 > img {
